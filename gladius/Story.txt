@@ -1,0 +1,254 @@
+Start
+
+What is your ASL?
+
+Implement middleAges - fantasy setting in intro
+
+    You're the resident adventurer in a small town.
+
+Awaken to an explosion, run out side there's a dragon.
+    Dragon says it wants you tiny humans to pay tribute or "I'll burn this hovel into the earth" Any questions?
+        - "Hey Dragon, Up yours!"
+            > "The Dragon is a bit puzzled by your remark. It decides to quell your defiance by giving you the chomp." GAMEOVER
+        - "How much gold do you demand Dragon?"
+            > "At least 400 gold, "
+                -- "Aight."
+        - "Where can I find gold?"
+            > "Not my problem, you have three days."
+                mainMenu()
+
+
+        The village chief comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
+        MainMenu()
+            - Try to fund raise from townsfolk for the money.
+                > TOWN "You decide to ask the townsfolk to donate money to pay off the Dragon."
+            - Go to the dungeon.
+                >DUNGEON "You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot."
+            - Summon the Dragon
+                >DRAGON
+            - Check amount of gold
+                >CHECK_GOLD
+            - Check collected items
+                >CHECK_LOOT
+
+
+******In TOWN
+        There are a few people in town that might be able to donate.
+        [Total Gold collectible (!theft) = 300G , (theft) = more ]
+        - Go to the Baker
+            > Ask for a donation
+                = "Sure thing, it ain't much but here is what i can spare. "
+                + 15 G
+            > Steal from register
+                = "You distract the Baker by pointing behind him. You reach into the register and make off with the dough. *hur hur*"
+                + 30 G
+                - karma 1
+
+        - Go to  the ShopKeep
+            // For buying weapons can only have one. so if (equippedWeapon == null) else you must sell or discard your other weapon
+            //Sword is good against dragon
+            //Hammer will knock the skeletons apart (skeletons cant die), will stun the dragon need ambush to succeed killing Dragon.
+            //Torch is not a weapon, helps you see in the dungeon. If you have booze: you can make a firebomb to attack the Lich (doesn't kill him, allows you to loot the dungeon,  needs Dragon's flame to kill undead)
+            > Buy a sword for 10G
+                = "You purchased a short Sword"
+                + (sword)
+                - 10G
+            >Buy a Warhammer 15G
+                = "You purchased a warhammer"
+                + (hammer)
+                - 15G
+            > Buy a Torch for 5G
+                = "You purchased a torch"
+                +(torch)
+                -5G
+            > Ask for a donation
+                = "If it means that we will still have a town by day's end: i'm in."
+                + 50 G
+            > Steal from the ShopKeep
+                (knowsShopLovesKhanway)
+                    = "You distract the Shopkeep by telling him presidential candidate Khanway Vest is campaigning outside." He excitedly runs outside and you safely empty the till.
+                    + 100 G
+                else
+                    = "You fail to find an opening to make a grab at the cash. The shopkeep is on his game like white on rice."
+            > Leave
+
+
+        - Go to the Noble Lord of the town
+            > Ask for a donation
+                = "Begone with you beggar! I shall have the guard remove you at once!"
+            > Steal from the Lord
+                (blackJack)
+                    = You prowl about the premises until night time. You see your opportunity and knock out a few guards and get to the loot room. You make off with a sizeable amount.
+                    + 350 G
+                    - 1 Day
+                else
+                    = You prowl about the premises until night time. You sneak into the loot room and load up your pockets with that sweet sweet gold.
+                    = On your way out a guard sees you anc raises the alarm. You try to flee but all the gold weighs you down. The guards quickly apprehend you. The Captain of the guard takes you before the Noble Lord.
+                    = "How dare thou attempt to steal from me! You WILL learn! Un-head him Captain."  GAMEOVER
+
+            > Leave
+
+        - Go to  the Tanner
+            > Ask for a donation
+                = "Of course, of course we all have skin in this game, I'll give what I can if it means saving our home."
+                + 20 G
+            > Rob the Tanner
+                = "Aw heck, first the dragon burns half the town and now this?" You make off with 45 G
+                + 45 G
+                - karma 1
+            > Leave
+
+        - Go to  the Tavern
+            > Ask the Town drunk
+                > Ask for a donation
+                    = " The heck? Do I look like i ain't drunk all my money already?"
+                    > Steal his booze
+                        = (booze)
+                        - karma 1
+                    > Leave
+                > Ask for a drink
+                    = "Get bent, but uh, ill sell you this bottle for 25G"
+                        >Yes
+                            =(Booze)
+                        >No
+                            = "then stop wasting my time, i have drinkin to do."
+            > Talk to the Barkeep
+                >Ask for a donation
+                    = "Nah if this town burns down i'd be a blessing."
+                > Order a drink
+                    ( G > 5)
+                        = "If that damn shopkeep keeps talkin about how that Khanway Vest is going to "Make dragons dead again" I'm gonna slug him. Lot of help that bastard has done for us recently."
+                        + (knowShopLovesKhanway)
+                        - 5 G
+                    (G < 5)
+                        = "If you're lookin for fee drink, go talk to that drunk. This ain't a charity."
+                > Steal from the Barkeep
+                    = "Your first mistake friend is thinkin that I dont get my share of thieves in here." The Barkeep gives you a right beating and takes half your gold for his trouble.
+                    - (Gold / 2)
+                    - karma 1
+                > Leave
+             > Leave
+
+        - Go to the Local Crime Boss
+            > Ask for a donation
+                = "Now just why should we give a damn about what happens to the town? It ain't done nothin for us."
+                > No town means no money for your gang to steal.
+                    = "Oi, we'll just find another town, now beat it."
+                    = > Leave
+                > Hey theres no money in petty crime, Look at the Noble Lord. Owning this town in the real racket. Help the town and im sure we can get you to run the place.  It would all be legal, that just means no one will stop you,
+                    = "I like the sound of the town owin' the gang. Don't go forgettin' you owe me too."
+                        + 150 G
+                        + (oweTheMob)
+                > "for the first time in your miserable existence you can be the good guy. Help the town and they'll owe you. "
+                    = "Take this dog out back and give him what's for." The Crime Boss'es goons take you out back and take turns kicking you in the head. GAMEOVER
+                > (LichQuest)  Hey im looking to rob the Noble, I'm in need of something quiet to get past the guards.
+                    = "Yeah i got a little something that could help. A blackjack, i'd be willing to let it go for 50 G."
+                        > Sure
+                            ="Pleasure doin business with ya."
+                            -50 G
+                            +(Blackjack)
+                        > That price is too steep for me
+                            = The get the HEK out!
+                > Leave
+
+        - Go to the at the Temple
+            > Ask for a donation
+                = "Well ain't this a change of pace. I'm sorry but the temple of Talos has very little to give. Here's what we can."
+                + 10 G
+            >Steal from the Temple
+                = "What did I tell ya? Nothing here mate."
+                +(talosMad)
+            >Ask for some Holy Water
+                = "By the divines i bless this water in the name of Talos. By the way this isn't your regular Holy water."
+                + (holyWater)
+            > Make a donation
+                - gold.makeDonation( i )
+                ( i > 99G)
+                    = "Thank you may Talos bless your journey."
+                    + (!talosMad)
+                ( i < 99G)
+                     = "Thank you may Talos bless your journey."
+
+
+        - Go Home
+            >Return to MainMenu
+
+
+******IN DUNGEON
+        You outside the local dungeon of Blarrg.
+        >Go inside
+            dungeonMenu()
+        >Go home
+
+        INSIDE DUNGEON
+        You walk inside and are met by a shambling figure. "Welcome to the Blarrg encampment traveler. I am Mr. Boneregard servant of Lich Thel'zan."
+        You see the face of the figure and its a skeleton!
+        > "Die undead beast!" Strike the skeleton with your weapon!
+            (sword)
+            + SkeleStab 1
+            = You ram your sword between the ribs to the skeleton. It stares at you blankly. "Oh come off it. You can't hurt me with that." He takes your sword out of him and hands it back to you. "Did you come here for a reason?"
+            > Stab him again
+                = "I said quit it friend. Did you need something" A little more annoyed, he once again hands you back your sword.
+                > Stab him a third time.
+                    =skeletonHadEnough(
+                        ="Alright you come into my house and try to kill me three times, I'm sick of you 'paladin types' Welcome to the Bone Zone"
+                        = A mob of skeletons block your exit and they swarm on you and rip the flesh from your bones. GAMEOVER.)
+            > Apologize and explain your quest to help your village.
+                = "Hmm, that sucks eh? Maybe our Lich can help you out, would you like to have a chat?"
+                > Yes, I would be honored
+                    = talkToLich()
+                > No, way Jose I dont negotiate with undead.
+                    = attackSkeleton(weapon)
+            > "You can talk?!"
+                = Yeah we all can, we're just stripped of our mortal coil and a few bad eggs gave the rest of us lot a bad reputation with humans. We're not so bad once you get past the whole undead thing.
+            >" Eee! Y-y-you can t-talk!" Run out of the dungeon.
+                Leave Dungeon.
+        > "Oh hey haven't talked to a skeleton before, you're not the eat-the-flesh-of-the-living type are you?"
+            = The skeleton laughs " No no, since losing our flesh we haven't succumbed to the Black Rage like most skeletons do, it's all thanks to us being led by our Lich."
+            >"What does your Lich want?"
+                ="We are interested in technological advancement and seeking away back into the land of the living. Not trying to stay dead forever you know."
+            >"Can you offer any help for my town?" Explain the plight of your village.
+                = "Interesting, I don't know if im the bone to say, but perhaps our Lich might have a solution for you. I'll take you to him."
+                gotoLich()
+            >"Nah I bet you are, suck eggs bonehead."
+                = The skeleton sighs drearily "Okay how do you want to do this?"
+                    >"Do what?"
+                        =Skeletons surround you and rip you to pieces. GAMEOVER
+            >"Oh hey I gotta go, I just remembered I have to vacuum my carpet."
+                =The skeleton chuckles "Pfft hehe, everyone knows vacuums aren't real, come i'll introduce you to our Lich, he could use your help.."
+                gotoLich()
+            >"Yikes, did not expect to talk to a skeleton today, i gotta go."
+                = The skeleton replies in an upbeat tone "Okay! Freaky I know, just know we are not here to hurt anyone. Any time you want to come back: we'll be here."
+                Leave Dungeon
+
+            GOTOLICH()
+                The skeleton leads you though a dark labyrinth to a chamber were there is a pale blue light coming from a towering figure that floats eerily across the stone floor.
+                "My Lich I bring to you an adventurer that may be of use to us"
+                The Lich turns his ethereal gaze your direction, although chilling to behold, you sense no malice in his unearthly visage.
+                "Ah yes, I am Thel'zan. The ruling Lich over this crypt. For many years we have attempted to isolate ourselves from the outside world and advance our work in rehabilitating skeletons to their former lives, freeing them from the Black Rage"
+                "As of the last few years our research supplies have all but turned to dust, using out-dated tomes and old equipment our work has come to an agonizing halt."
+                    > "Sound rough Thel'zan, can't you go get more supplies?"
+                        ="If it were only so easy. Believe it or not many humans care for the undead for understandable reasons. We cannot trade for supplies and I have forbidden my servants from ransacking trade routes.
+                            Keeping only to attacking bandit camps."
+                        > "Do you want me to get you some supplies?"
+                            ="Oh no no, that would only solve our deficit for a time, what I would ask of you is that you speak you the traders in your town and convince them to trade with us.
+                                Only then will we have a steady influx of regents to continue our work."
+                        > "I can't help you Thel'zan, I have enough problems of my own." You explain your quest to save your town.
+                           = "I see that is a most unfortunate circumstance you are in."
+                                "We do collect much gold from the bandits that we attack, I have no use for gold without trade I am willing to pay you to speak to the townsfolk and open trade between us."
+                                >"I change my mind, I'm in!"
+                                    ="Very well, Mr. Boneregard please escort our guest out. I look forward to your return."
+                                >"Sorry Thel'zan, can't do it. I just have to find another way."
+                                    = "Understood, the offer is still available should you change your mind. Mr. Boneregard please escort our guest out."
+                                    > Leave dungon
+
+
+
+                    >"Aha! So you're in charge take this numbskull!!!" You attack
+                    attackLich()
+
+
+
+
+
+
