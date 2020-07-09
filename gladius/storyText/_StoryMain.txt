@@ -1,24 +1,27 @@
 Start
 
 What is your ASL?
+(I really dont care but it personalizes the story)
 
 Implement middleAges - fantasy setting in intro
 
-    You're the resident adventurer in a small town.
+    You're the resident adventurer the small town of Kleinstadt.
 
 Awaken to an explosion, run out side there's a dragon.
-    Dragon says it wants you tiny humans to pay tribute or "I'll burn this hovel into the earth" Any questions?
+    Dragon roars " Humans I demand a tribute of gold! Agreed or I shall burn this hovel into the earth. Any questions"?
         - "Hey Dragon, Up yours!"
-            > "The Dragon is a bit puzzled by your remark. It decides to quell your defiance by giving you the chomp." GAMEOVER
-        - "How much gold do you demand Dragon?"
-            > "At least 400 gold, "
-                -- "Aight."
-        - "Where can I find gold?"
-            > "Not my problem, you have three days."
+            > "The Dragon is somewhat surprised by the audacity of your remark. It decides to quell your defiance by giving you the chomp." GAMEOVER
+        > "How much gold do you demand Dragon?"
+            = "Bring me 500 gold. "
+                >"Aight."
+        > "Where can I find gold?"
+            = "Not my problem, you have three days."
+            = "Use this signal when you have the gold."
+            +(dragonFlare)
                 mainMenu()
 
 
-        The village chief comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
+        The town mayor comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
         MainMenu()
             - Try to fund raise from townsfolk for the money.
                 > TOWN "You decide to ask the townsfolk to donate money to pay off the Dragon."
