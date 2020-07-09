@@ -1,0 +1,34 @@
+Start
+
+What is your ASL?
+
+Implement middleAges - fantasy setting in intro
+
+    You're the resident adventurer in a small town.
+
+Awaken to an explosion, run out side there's a dragon.
+    Dragon says it wants you tiny humans to pay tribute or "I'll burn this hovel into the earth" Any questions?
+        - "Hey Dragon, Up yours!"
+            > "The Dragon is a bit puzzled by your remark. It decides to quell your defiance by giving you the chomp." GAMEOVER
+        - "How much gold do you demand Dragon?"
+            > "At least 400 gold, "
+                -- "Aight."
+        - "Where can I find gold?"
+            > "Not my problem, you have three days."
+                mainMenu()
+
+
+        The village chief comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
+        MainMenu()
+            - Try to fund raise from townsfolk for the money.
+                > TOWN "You decide to ask the townsfolk to donate money to pay off the Dragon."
+            - Go to the dungeon.
+                >DUNGEON "You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot."
+            - Summon the Dragon
+                >DRAGON_EVENT
+            - Check amount of gold
+                >CHECK_GOLD
+            - Check collected items
+                >CHECK_LOOT
+
+

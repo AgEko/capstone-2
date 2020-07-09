@@ -1,0 +1,115 @@
+******IN DUNGEON
+        You arrive outside the local dungeon: The crypt of Blarrg.
+        >Go inside
+            dungeonMenu()
+        >Go home
+
+        INSIDE DUNGEON
+        You walk inside and are met by a shambling figure. "Welcome to the Blarrg encampment traveler. I am Mr. Boneregard servant of Lich Thel'zan."
+        You see the face of the figure and its a skeleton!
+        > "Die undead beast!" Strike the skeleton with your weapon!
+            (sword)
+            + SkeleStab 1
+            = You ram your sword between the ribs to the skeleton. It appears at a loss for words. "Oh come off it. You can't hurt me with that." He takes your sword out of him and hands it back to you. "Did you come here for a reason?"
+            > Stab him again
+                = "I said stop, friend. Did you need something" A little more annoyed, he once again hands you back your sword.
+                > Stab him a third time.
+                    =skeletonHadEnough(
+                        ="Alright you come into my house and try to kill me three times, I'm sick of you 'paladin types' Welcome to the Bone Zone"
+                        = A mob of skeletons block your exit and they swarm on you and rip the flesh from your bones. GAMEOVER.)
+            > Apologize and explain your quest to help your village.
+                = "Hmm, that is terrible new indeed. We have no love for dragons;  Perhaps our Lich can provide you assistance, would you like an audience with him?"
+                > Yes, I would be honored
+                    = talkToLich()
+                > No, way Jose I dont negotiate with undead.
+                    = attackSkeleton(weapon)
+            > "You can talk?!"
+                = Yeah we all can, we're just stripped of our mortal coil and a few bad eggs gave the rest of us lot a bad reputation with humans. We're not so bad once you get past the whole undead thing.
+            >" Eee! Y-y-you can t-talk!" Run out of the dungeon.
+                Leave Dungeon.
+        > "Oh hey haven't talked to a skeleton before, you're not the eat-the-flesh-of-the-living type are you?"
+            = The skeleton laughs " No no, since losing our flesh we haven't succumbed to the Black Rage like most skeletons do, it's all thanks to us being led by our Lich."
+            >"What does your Lich want?"
+                ="We are interested in technological advancement and seeking away back into the land of the living. Not trying to stay dead forever you know."
+            >"Can you offer any help for my town?" Explain the plight of your village.
+                = "Interesting, I don't know if im the bone to say, but perhaps our Lich might have a solution for you. I'll take you to him."
+                gotoLich()
+            >"Nah I bet you are, suck eggs bonehead."
+                = The skeleton sighs drearily "Okay how do you want to do this?"
+                    >"Do what?"
+                        =Skeletons surround you and rip you to pieces. GAMEOVER
+            >"Oh hey I gotta go, I just remembered I have to vacuum my carpet."
+                =The skeleton chuckles "Pfft hehe, everyone knows vacuums aren't real, come i'll introduce you to our Lich, he could use your help.."
+                gotoLich()
+            >"Yikes, did not expect to talk to a skeleton today, i gotta go."
+                = The skeleton replies in an upbeat tone "Okay! Freaky I know, just know we are not here to hurt anyone. Any time you want to come back: we'll be here."
+                Leave Dungeon
+
+            GOTOLICH()
+            (!vistedLich)
+                The skeleton leads you though a dark labyrinth to a chamber were there is a pale blue light coming from a towering figure that floats eerily across the stone floor.
+                "My Lich I bring to you an adventurer that may be of use to us"
+                The Lich turns his ethereal gaze your direction, although chilling to behold, you sense no malice in his unearthly visage.
+                "Ah yes, I am Thel'zan. The ruling Lich over this crypt. For many years we have attempted to isolate ourselves from the outside world and advance our work in rehabilitating skeletons to their former lives, freeing them from the Black Rage"
+                "As of the last few years our research supplies have all but turned to dust, using out-dated tomes and old equipment our work has come to an agonizing halt."
+                    > "Sound rough Thel'zan, can't you go get more supplies?"
+                        ="If it were only so easy. Believe it or not many humans care for the undead for understandable reasons. We cannot trade for supplies and I have forbidden my servants from ransacking trade routes.
+                            Keeping only to attacking bandit camps."
+                        > "Do you want me to get you some supplies?"
+                            ="Oh no no, that would only solve our deficit for a time, what I would ask of you is that you speak you the traders in your town and convince them to trade with us.
+                                Only then will we have a steady influx of regents to continue our work."
+                                >"I would be honored to help Thel'zan."
+                                    =Thel'zan is noticeably excited, "Good! Many that come through here have not show us the kindness you have this day! Now go, I early await your return. Mr. Boneregard please escort our guest out,"
+                                    =Leave Dungeon
+                                >"Sorry I can't help you."
+                                    ="I do understand, the offer is still available should you change your mind. Mr. Boneregard please escort our guest out."
+                                    =Leave Dungeon
+                        > "I can't help you Thel'zan, I have enough problems of my own." You explain your quest to save your town.
+                           = "I see that is a most unfortunate circumstance you are in."
+                                "We do collect much gold from the bandits that we attack, I have no use for gold without trade I am willing to pay you to speak to the townsfolk and open trade between us."
+                                >"I change my mind, I'm in!"
+                                    ="Very well, Mr. Boneregard please escort our guest out. I look forward to your return."
+                                >"Sorry Thel'zan, can't do it. I just have to find another way."
+                                    = "Understood, the offer is still available should you change your mind. Mr. Boneregard please escort our guest out."
+                                    > Leave dungeon
+
+                    >"Aha! So you're in charge take this numbskull!!!" You attack
+                    attackLich()
+                        > Use weapon
+                            = Your weapon has no effect. "Mr. Boneregard what is the meaning of this?"
+                            = "Forgive me my Lich, this adventurer presented them self quite differently upon entry to your Crypt. I shall handle this with due haste."
+                            = "No need Mr. Boneregard." He dismisses Mr. Boneregard with a wave. "I shall deal with this interloper."
+                            = You are lifted off your feet and expunged of your soft tissue. As the flesh is torn from your bones your mind crumples into madness. ENDGAME
+                        (booze)
+                        >Use booze as a fire bomb
+                            =The Lich howls as the fire spreads across the room engulfing him and Mr. Boneregard in flames. Although it probably wont kill the skeletons it has bought you enough time to grab what loot you can and make a get away.
+                            =You sprint for the exit
+                            (torch)
+                                =Thankfully you picked up a torch, using its light you fend off incoming skeletons and make it to the exit.
+                                =Leave Dungeon
+                            (!torch)
+                                =You leap out of the room into a pitch black passageway. You attempt to feel your way towards the exit.
+                                = Unfortunately for you skeletons can see in the dark and you just set their boss on fire. You are dragged back to the underbelly of the dungeon where you are tortured to death with experimentations. GAMEOVER
+                        (holyWater)
+                        > Use the holyWater on the Lich
+                            = You throw the Holy Water on the Lich and his servant.
+                            = You expect the Lich to be hurt by the Holy Water but Talos is the Lord of Storms, a chaotic evil deity.
+                            = After a brief shudder the Lich blankly hovers before you. Apparently charmed. He awaits your command.
+                            (charmedLich)
+                            > "How do I kill you skeletons?"
+                                The Lich gives a hollow, slow response, "Fire... dragon fire... will seal our fate..."
+                            > "Are there any useful trinkets here?"
+                                "None... all used... only gold is here..."
+                                    >"Well hork it over bozo!"
+                                        +500 G
+                                        charmedEscort()
+                            > "Where's your gold at?"
+                                = Thel'zad points a bony finger to a corner of the room.
+                                = You quickly gather what you can carry
+                                    +500 G
+                                    charmedEscort()
+                             charmedEscort(){
+                                You tell the Lich to stay put and command his skeletons to stand down.
+                                Mr. Boneregard who is also under your command leads you to the entrance of the dungeon.
+                                dungeonMenu()
+                             }

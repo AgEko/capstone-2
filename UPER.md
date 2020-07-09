@@ -28,7 +28,7 @@
     }
         
 []characters
-    -Boo
+    - Lich Thel'zad
 
 <>Exploration
 []mapBoards
