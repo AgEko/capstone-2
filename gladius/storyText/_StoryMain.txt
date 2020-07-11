@@ -7,10 +7,10 @@ Implement middleAges - fantasy setting in intro
 
     You're the resident adventurer the small town of Kleinstadt.
 
-Awaken to an explosion, run out side there's a dragon.
-    Dragon roars " Humans I demand a tribute of gold! Agreed or I shall burn this hovel into the earth. Any questions"?
+Awaken to an explosion, as you run out side there's a massive dragon.
+    Dragon roars " Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth. Any questions"?
         - "Hey Dragon, Up yours!"
-            > "The Dragon is somewhat surprised by the audacity of your remark. It decides to quell your defiance by giving you the chomp." GAMEOVER
+            > "The Dragon is somewhat surprised by the audacity of your reply. It decides to quell your defiance by giving you the chomp." GAMEOVER
         > "How much gold do you demand Dragon?"
             = "Bring me 500 gold. "
                 >"Aight."

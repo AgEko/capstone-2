@@ -23,3 +23,7 @@ You fire the dragon flare into the sky. After a few minutes the dragon crashes i
             =The dragon responds "Well how about two fiddy?"
             >"Oh now it's only two fiddy?! What is it in for lock-ness munchies or somethin?"
             = Although correct that this was for the Dragon's severe case of the munchies, you could not have had worse timing. The Dragon makes you it's snack. Bon appetit! GAMEOVER
+
+
+            build dragonPayoff() here
+            there is an overrride @ ambushEvent()

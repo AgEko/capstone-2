@@ -35,6 +35,10 @@
                     - karma 1
                 else
                     = "You fail to find an opening to make a grab at the cash. The shopkeep is on his game like white on rice."
+            (lichQuest)
+            > Talk to the shopkeep about trading with the Lich
+                = "Woah that's quite a tale. I'm willing to trade, but we are going to have to do it out in the open. I won't risk my caravans going into that dungeon."
+                = (lichQuestSuccess)
             > Leave
 
 

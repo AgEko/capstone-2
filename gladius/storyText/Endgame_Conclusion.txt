@@ -1,0 +1,79 @@
+Player
+int gold;
+item hammer;
+item torch;
+item booze
+item blackjack;
+item holyWater;
+
+// Unused
+bool
+-shopLovesKhanway
+-ambush
+-drunkDragon
+
+//Effect Endgame dialogue
+int karma;
+
+
+boolean(stoleFromLich)
+// can dead if (!dragonDF) && (karma < -3)
+// Skeletons retreat, decide that their work is more important than revenge.
+
+boolean (talosMad)
+// can force (stoleFromLich) even if (dragonGF)
+
+boolean (lichQuestSuccess)
+//flavour
+boolean (dragonGF)
+//flavour
+boolean(deadDragon)
+//flavour
+boolean (oweTheMob)
+//flavour
+
+
+//If you get here the town is saved, you can still die in the post game it will go.
+
+scenarioResults();
+mainGameMenu();
+
+
+
+Standard ending
+    =You saved the town from the dragon's wrath! The townspeople rejoice and you can retire back to your home for a well deserved nap!
+    (oweTheMob)
+        = The Crime Boss calls in the favor you owe him to unseat the Noble Lord for ownership of the town. After a few shady deals he eventually becomes the new Lord.
+        = To your bewilderment, the Crime boss actually brings much prosperity to the town. A booming economy and a strict yet fair judicial system.
+        = Oh he hit the sweet spot on the Laffer curve. Netting im the most in taxes while still allowing the free market to grow like a weed. Good job Crime Boss!
+    (dragonGF)
+        = You're now going steady with Lirastrasza the Dragon. Who woulda thunk it? Dating a dragon!
+        = You go on many adventure and bring home loads of gold and gems to add to Lirastrasza's dragon horde.
+        = *some* of the gold might be extorted from other towns, but hey. Our town is just peachy!
+    (dragonDead) && (soloDragonKill)
+        = After slaying the dragon solo, you turn into a bit of a celebrity at the adventures' guild.
+        = You can charge top coin for your services and go on many harrowing adventures.
+        = You will be remembered for quite some time, Dragon Slayer.
+    (dragonDead) && (!soloDragonKill)
+        = You did your part to kill the dragon, working with the people of Kleinstadt you found strength in working together.
+        = Having killed a dragon the people of the town become hardy and fearless.
+        = Kleinstadt becomes a great city focused on centralizing the Adventuring guilds and bringing peace throughout the land.
+    (dragonDead) && (lazyDragonKill)
+        = You were instrumental in getting the dragon in position to be slain.
+        = The people of Kleinstadt don't quite see it this way, they are upset at your lack of action during the fight with the dragon.
+        =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

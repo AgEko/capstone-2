@@ -5,6 +5,7 @@
         >Go home
 
         INSIDE DUNGEON
+        (!visited)
         You walk inside and are met by a shambling figure. "Welcome to the Blarrg encampment traveler. I am Mr. Boneregard servant of Lich Thel'zan."
         You see the face of the figure and its a skeleton!
         > "Die undead beast!" Strike the skeleton with your weapon!
@@ -21,7 +22,7 @@
                 = "Hmm, that is terrible news indeed. We have no love for dragons;  Perhaps our Lich can provide you assistance, would you like an audience with him?"
                 > Yes, I would be honored
                     = talkToLich()
-                > No, way Jose I dont negotiate with the undead.
+                > No, way Jose I don't negotiate with the undead.
                     = attackSkeleton(weapon)
         > "You can talk?!"
             = Yes we all can, we're just stripped of our mortal coil and a few bad eggs gave the rest of us lot a bad reputation with humans.
@@ -41,7 +42,7 @@
                     >"Do what?"
                         =Skeletons surround you and rip you to pieces. GAMEOVER
             >"Oh hey I gotta go, I just remembered I have to vacuum my carpet."
-                =The skeleton chuckles "Heh, everyone knows vacuums aren't real, come i'll introduce you to our Lich, he could use your help.."
+                =The skeleton chuckles "Heh, everyone knows vacuums aren't real, come I'll introduce you to our Lich, he could use your help.."
                 gotoLich()
             >"Yikes, did not expect to talk to a skeleton today, i gotta go."
                 = The skeleton replies in an upbeat tone "Okay! We are a curiosity most assuredly, just know we are not here to hurt anyone. Any time you would like to come back: we'll be here."
@@ -49,7 +50,8 @@
 
             GOTOLICH()
             (!vistedLich)
-                The skeleton leads you though a dark labyrinth to a chamber were there is a pale blue light coming from a towering figure that floats eerily across the stone floor.
+                The skeleton leads you though a dark labyrinth with the skeletons guidance you would certainly be lost in the darkness.
+                 You arrive at a chamber were there is a pale blue light coming from a towering figure that floats eerily across the stone floor.
                 "My Lich I bring to you an adventurer that may prove useful."
                 The Lich turns his ethereal gaze your direction, although chilling to behold, you sense no malice in his unearthly visage.
                 "Ah yes, I am Thel'zan. The ruling Lich over this crypt. For many years we have attempted to isolate ourselves from the outside world and advance our work in rehabilitating skeletons to their former lives of flesh, freeing them from the Black Rage"
@@ -105,11 +107,12 @@
                             > "Are there any useful trinkets here?"
                                 "None... all used... only gold is here..."
                                     >"Well hork it over bozo!"
+                                    = You gather what you can carry
                                         +500 G
                                         charmedEscort()
                             > "Where's your gold at?"
                                 = Thel'zad points a bony finger to a corner of the room.
-                                = You quickly gather what you can carry
+                                = You gather what you can carry
                                     +500 G
                                     charmedEscort()
                              charmedEscort(){
@@ -117,3 +120,39 @@
                                 Mr. Boneregard who is also under your command leads you to the entrance of the dungeon.
                                 dungeonMenu()
                              }
+
+(visitedCrypt)
+    (stoleFromLich)
+        = Upon entry to the Crypt you stand at the entry.
+        = All at once every skeleton locks their sight on you like magnets.
+        = "He returns!" Mr. Boneregard calls out. "Un-flesh him!"
+            > Fight
+                = Are you dumb? There like ten skeles and they don't die. You better run.
+                    > Run
+                        = You cheese it. Wew!
+                        dungeonMenu()
+                    > "Nah I got this!"
+                        = But do you?
+                        = The skeletons swarm on you. As expected.
+                        = They rip out your femurs and beat you to death with them. GameOVER
+            > Run
+                 = You cheese it. Wew!
+                 = dungeonMenu()
+
+        = Mr.Boneregard greets you. "Welcome friend, do you bring good news?"
+            (!lichQuestSuccess)
+                > "Not just yet."
+                    = "Very well, please return when you succeed establishing trade for us."
+                    dungeonMenu()
+            (lichQuestSuccess)
+                > You inform Mr. Bonereguard with the details of the arrangement that the shopkeep proposed.
+                    = "Outstanding work. Here is payment for your assistance adventurer. Thank you."
+                    + 400G
+                    (tradeComplete)
+                    dungeonMenu()
+    (tradeComplete)
+        = Mr. Boneregard greets you. "Thank you for your assistance, we have no need for your services at this time."
+        = You leave
+        dungeonMenu()
+
+
