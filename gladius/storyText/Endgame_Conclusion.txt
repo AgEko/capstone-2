@@ -60,8 +60,30 @@ Standard ending
         = Kleinstadt becomes a great city focused on centralizing the Adventuring guilds and bringing peace throughout the land.
     (dragonDead) && (lazyDragonKill)
         = You were instrumental in getting the dragon in position to be slain.
-        = The people of Kleinstadt don't quite see it this way, they are upset at your lack of action during the fight with the dragon.
-        =
+        = The people of Kleinstadt don't quite see it this way, they are upset at your lack of action during the fight with the dragon as many of the men died during the ambush.
+        = You continue life as an small time adventurer, not interested in risking your life your life for every random contract
+    (stoleFromLich) &&  && (!dragonGF)
+        = Having stolen from the Lich Thel'zan a band of skeletons led by Mr.Boneregard arrive outside town. Demanding the townsfolk had you over to be slain by their had.
+        (karma < -3)
+            = The people of Kleinstadt don't find you to be a very honorable guy and decide to hand you over to the Lich'es minions.
+            (dragonGF)
+                = You tell Lirastrasza about the Lich'es demands and she snorts her disapproval at the attempt on your life.
+                = Lirastrasza takes flight and launches a fireball at the skeletons who scatter, many perishing in the dragon flame, the other screeching as they retreat.
+                = You give Lirastrasza a peck on the cheek, "Thanks Boo.".
+                = Having been betrayed by the towns fold you decide to live as a roving bandito with Lirastrasza stealing gold and amassing a healthy dragon horde.
+            (!dragonGF)
+                = The townsfolk hand you over the Mr. Boneregard. Who drags you back to the Crypt.
+                = Thel'zan sucks your soul out and make you into a haunting geist. You are tethered to the entrance of the Crypt as a deterrence to those who would seek harm on the dungeon's inhabitants.
+        (karma > 0)
+            = The townspeople of Kleinstadt side with you and tell Mr.Boneregard to get stuffed.
+            = Mr.Boneregard remebering his Lich'es command to no start a war with the humans. Decided that you are not worth the cost.
+            = The Skeletons retreat and you live in peace with the people of Kleinstadt.
+    (lichQuestSuccess)
+        = The shopkeep sends out a heavily armed caravan to cautiously trade with the Lich.
+        = The trades prove fruitful for both parties involved. The shopkeep relaxes the heavy guard on his caravans.
+        = With the Lich keeping the bandits clear from the trading routes, all trade in the area experiences a boom in prosperity and safety.
+        = The Lich is able to continue his research in peace while his minions moonlight as security forces for the region.
+
 
 
 
