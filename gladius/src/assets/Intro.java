@@ -3,7 +3,7 @@ package assets;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Intro {
+public class Intro extends Scene {
 
     public  void adventureIntro(){
         introToQuest();
@@ -11,10 +11,10 @@ public class Intro {
 
     }
     private void introToQuest(){
-        Utility.awaitInput("You're the resident adventurer the small assets.town of Kleinstadt.");
-        Utility.awaitInput("Awaken to an explosion, as you run out side there's a massive dragon!");
-        Utility.awaitInput("Dragon roars \"Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth.\"");
-        Utility.awaitInput("\"Any questions?\"");
+        awaitInput("You're the resident adventurer the small town of Kleinstadt.");
+        awaitInput("Awaken to an explosion, as you run out side there's a massive dragon!");
+        awaitInput("Dragon roars \"Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth.\"");
+        awaitInput("\"Any questions?\"");
     }
 
     private void responseToQuest(){
@@ -28,18 +28,18 @@ public class Intro {
 
             switch (choice){
                 case 1:
-                    Utility.awaitInput("The Dragon is rather surprised by the audacity of your reply.");
-                    Utility.singleInput("*That worked?*  You give the dragon a cheeky grin.");
-                    Utility.gameOver("The dragon decides to quell your defiance by giving you the chomp.");
+                   awaitInput("The Dragon is rather surprised by the audacity of your reply.");
+                   singleInput("*That worked?*  You give the dragon a cheeky grin.");
+                   gameOver("The dragon decides to quell your defiance by giving you the chomp.");
                     break;
                 case 2:
-                    Utility.awaitInput("\"Bring me 500 gold. \"");
-                    Utility.singleInput("\"Aight.\"");
+                    awaitInput("\"Bring me 500 gold. \"");
+                    singleInput("\"Aight.\"");
                     responseToQuest();
                     break;
                 case 3:
-                    Utility.awaitInput("\"Not my problem, you have three days.\"");
-                    Utility.awaitInput("\"Use this signal when you have the gold.\"");
+                    awaitInput("\"Not my problem, you have three days.\"");
+                    awaitInput("\"Use this signal when you have the gold.\"");
                     System.out.println("You receive a Dragon Flare.");
                     //Todo: add dragonFlare
                     HomeMenu homeMenu = new HomeMenu();

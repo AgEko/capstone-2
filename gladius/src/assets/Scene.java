@@ -3,19 +3,15 @@ package assets;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Utility {
+public abstract class Scene {
 
-    public static void awaitInput() {
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-    }
-    public static void awaitInput(String a) {
+    protected static void awaitInput(String a) {
         System.out.println(a);
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.nextLine();
     }
 
-    public static void singleInput(String a) {
+    protected static void singleInput(String a) {
         System.out.println("1 - " + a);
 
         try {
@@ -37,11 +33,9 @@ public class Utility {
         }
     }
 
-
-
-    public static void gameOver(String a){
-        Utility.awaitInput(a);
-        System.out.println("As you die you never learn the fate of what happens to you assets.town. Don't do that thing you did that get dead next time.");
+    protected static void gameOver(String a){
+        Scene.awaitInput(a);
+        System.out.println("As you die you never learn the fate of what happens to your town. Don't do that thing you did that get dead next time.");
         WorldState.getInstance().setGameOver(true);
     }
 

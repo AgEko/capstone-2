@@ -55,7 +55,7 @@ public class WorldState {
     }
 
     public static void reset(){
-        instance = new WorldState();
+        instance = null;
     }
 
     public static void setInstance(WorldState instance) {

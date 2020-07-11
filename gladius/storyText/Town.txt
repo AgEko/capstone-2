@@ -18,7 +18,7 @@
             //Torch is not a weapon, helps you see in the dungeon. If you have booze: you can make a firebomb to attack the Lich
             // (doesn't kill him, allows you to loot the dungeon,  needs Dragon's flame to kill undead)
             >Buy a Warhammer 15G
-                = "You purchased a warhammer"
+                = "You purchased a Warhammer"
                 + (hammer)
                 - 15G
             > Buy a Torch for 5G

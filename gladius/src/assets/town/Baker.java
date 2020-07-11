@@ -1,17 +1,17 @@
 package assets.town;
 
-import assets.Town;
-import assets.Utility;
+
+import assets.Scene;
 import assets.WorldState;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Baker {
+public class Baker extends Scene {
 
     public void interaction(){
         if (!WorldState.getInstance().isInBakery()){
-            Utility.awaitInput("You enter the bakery and see the Baker pounding on some cake.");
+            awaitInput("You enter the bakery and see the Baker pounding on some cake.");
             WorldState.getInstance().setInBakery(true);
         }
         System.out.println("0 - Leave" +
@@ -24,25 +24,25 @@ public class Baker {
             switch (choice){
                 case 0:
                     WorldState.getInstance().setInBakery(false);
-                    Town town = new Town();
-                    town.townMenu();
+//                    Town town = new Town();
+//                    town.townMenu();
                     break;
                 case 1:
                     if (!WorldState.getInstance().isTookDonationBaker()){
-                        Utility.awaitInput("\"Sure thing, it ain't much but here's what I can spare. \"");
-                        Utility.awaitInput("He gives you 15 gold.");
+                        awaitInput("\"Sure thing, it ain't much but here's what I can spare. \"");
+                        awaitInput("He gives you 15 gold.");
                         WorldState.getInstance().addGold(15);
                         WorldState.getInstance().setTookDonationBaker(true);
                         interaction();
                     } else {
-                        Utility.awaitInput("You already took a donation!");
+                        awaitInput("You already took a donation!");
                         interaction();
                     }
                     break;
                 case 2:
                     if (!WorldState.getInstance().isStoleFromBaker()){
-                        Utility.awaitInput("You distract the Baker by pointing behind him. \"Look! an orc kissing a mermaid!\"");
-                        Utility.awaitInput("You reach into the register and make off with the dough. *hur hur*" +
+                        awaitInput("You distract the Baker by pointing behind him. \"Look! an orc kissing a mermaid!\"");
+                        awaitInput("You reach into the register and make off with the dough. *hur hur*" +
                                 "\nYou grabbed 30 gold." +
                                 "\nYou call the Baker a weirdo for looking.");
                         WorldState.getInstance().addGold(30);
@@ -50,7 +50,7 @@ public class Baker {
                         WorldState.getInstance().subtractKarma(1);
                         interaction();
                     }else {
-                        Utility.awaitInput("You already stole from here!");
+                        awaitInput("You already stole from here!");
                         interaction();
                     }
                     break;
@@ -58,7 +58,6 @@ public class Baker {
                     System.out.println("That is not a valid option.");
                     interaction();
             }
-
         } catch (InputMismatchException e){
             System.out.println("That is not a valid option.");
             interaction();

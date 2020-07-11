@@ -2,26 +2,17 @@ package assets;
 
 
 public class Adventure {
-    Game game;
     Player player = new Player();
+    public Adventure (){
 
-    public Adventure (Game game){
-        this.game = game;
     }
 
 
 
-    public void startAdventure(){
-        Intro intro = new Intro();
-        intro.adventureIntro();
-        System.out.println("You lost you wet sock, suck it up.");
-        if (WorldState.getInstance().isGameOver()){
+    public void adventureIntro(){
+        new Intro().adventureIntro();
             WorldState.reset();
-            Utility.awaitInput();
-            startAdventure();
-        }
-        //load assents
-        //narration
+            Scene.awaitInput("Game reset");
     }
 
 
