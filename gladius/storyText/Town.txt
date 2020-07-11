@@ -1,6 +1,7 @@
 ******In TOWN
         There are a few people in town that might be able to donate.
       //  [Total Gold collectible (!theft) = 300G , (theft) = more ]
+
         - Go to the Baker
             > Ask for a donation
                 = "Sure thing, it ain't much but here is what i can spare. "
@@ -13,7 +14,6 @@
 
       - Go to  the ShopKeep
             // For buying weapons can only have one. so if (equippedWeapon == null) else you must sell or discard your other weapon
-            //Sword is good against dragon
             //Hammer will knock the skeletons apart (skeletons cant die), will stun the dragon need ambush to succeed killing Dragon.
             //Torch is not a weapon, helps you see in the dungeon. If you have booze: you can make a firebomb to attack the Lich
             // (doesn't kill him, allows you to loot the dungeon,  needs Dragon's flame to kill undead)

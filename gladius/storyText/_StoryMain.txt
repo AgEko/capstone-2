@@ -1,7 +1,7 @@
 Start
 
-What is your ASL?
-(I really dont care but it personalizes the story)
+What is your name?
+(personalizes )
 
 Implement middleAges - fantasy setting in intro
 
@@ -9,8 +9,10 @@ Implement middleAges - fantasy setting in intro
 
 Awaken to an explosion, as you run out side there's a massive dragon.
     Dragon roars " Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth. Any questions"?
-        - "Hey Dragon, Up yours!"
-            > "The Dragon is somewhat surprised by the audacity of your reply. It decides to quell your defiance by giving you the chomp." GAMEOVER
+        > "Hey Dragon, Up yours!"
+            = "The Dragon is somewhat surprised by the audacity of your reply.
+                > "*That worked?* "
+                =It decides to quell your defiance by giving you the chomp." GAMEOVER
         > "How much gold do you demand Dragon?"
             = "Bring me 500 gold. "
                 >"Aight."
@@ -23,7 +25,7 @@ Awaken to an explosion, as you run out side there's a massive dragon.
 
         The town mayor comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
         MainMenu()
-            - Try to fund raise from townsfolk for the money.
+            - Try to fundraise from townsfolk for the money.
                 > TOWN "You decide to ask the townsfolk to donate money to pay off the Dragon."
             - Go to the dungeon.
                 >DUNGEON "You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot."
