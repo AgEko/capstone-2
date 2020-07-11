@@ -1,3 +1,5 @@
+import assets.Game;
+
 public class Main {
 
 

@@ -1,7 +1,10 @@
-package assets;
+package assets.items;
 
-public class Item {
+public abstract class Item {
     String name;
+
+    public Item() {
+    }
 
     public Item(String name) {
         this.name = name;
@@ -9,9 +12,5 @@ public class Item {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

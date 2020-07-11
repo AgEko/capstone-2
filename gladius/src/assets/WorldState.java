@@ -1,11 +1,13 @@
 package assets;
 
 public class WorldState {
-    public static WorldState instance;
+    private static WorldState instance;
+
+    boolean gameOver;
 
     int gold = 0;
     int karma = 0;
-    boolean shopLovesKhan;
+    boolean knowShopLovesKhan;
     boolean oweTheMob;
     boolean isTalosMad;
 
@@ -27,6 +29,10 @@ public class WorldState {
             instance = new WorldState();
         }
         return instance;
+    }
+
+    public static void reset(){
+        instance = new WorldState();
     }
 
 
