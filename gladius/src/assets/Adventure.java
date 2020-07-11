@@ -15,7 +15,7 @@ public class Adventure {
         Intro intro = new Intro();
         intro.adventureIntro();
         System.out.println("You lost you wet sock, suck it up.");
-        if (WorldState.getInstance().gameOver){
+        if (WorldState.getInstance().isGameOver()){
             WorldState.reset();
             Utility.awaitInput();
             startAdventure();

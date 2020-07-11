@@ -34,7 +34,7 @@
             = The skeleton laughs " No no, since losing our flesh we haven't succumbed to the Black Rage like most skeletons do, it's all thanks to us being led by our Lich."
             >"What does your Lich want?"
                 ="We are interested in technological advancement and seeking away back into the land of the living. Not trying to stay dead forever you know."
-            >"Can you offer any help for my town?" Explain the plight of your village.
+            >"Can you offer any help for my assets.town?" Explain the plight of your village.
                 = "Interesting, I don't know if im the bone to say, but perhaps our Lich might have a solution for you. I'll take you to him."
                 gotoLich()
             >"Nah I bet you are, suck eggs bonehead."
@@ -60,7 +60,7 @@
                         ="If it were only so easy. Believe it or not many humans care for the undead for understandable reasons. We cannot trade for supplies and I have forbidden my servants from ransacking trade routes.
                             Keeping only to attacking bandit camps."
                         > "Do you want me to get you some supplies?"
-                            ="Oh no no, that would only solve our deficit for a time, what I would ask of you is that you speak you the traders in your town and convince them to trade with us.
+                            ="Oh no no, that would only solve our deficit for a time, what I would ask of you is that you speak you the traders in your assets.town and convince them to trade with us.
                                 Only then will we have a steady influx of regents to continue our work."
                                 >"I would be honored to help Thel'zan."
                                     =Thel'zan is noticeably excited, "Good! Many that come through here have not show us the kindness you have this day! Now go, I eagerly await your return. Mr. Boneregard please escort our guest out,"
@@ -68,7 +68,7 @@
                                 >"Sorry I can't help you."
                                     ="I do understand, the offer is still available should you change your mind. Mr. Boneregard please escort our guest out."
                                     =Leave Dungeon
-                        > "I can't help you Thel'zan, I have enough problems of my own." You explain your quest to save your town.
+                        > "I can't help you Thel'zan, I have enough problems of my own." You explain your quest to save your assets.town.
                            = "I see that is a most unfortunate circumstance you are in."
                                 "We do collect much gold from the bandits that we attack, I have no use for gold without trade I am willing to pay you to speak to the townsfolk and open trade between us."
                                 >"I change my mind, I'm in!"

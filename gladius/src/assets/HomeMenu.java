@@ -17,8 +17,8 @@ public class HomeMenu {
 
 
     public void homeMenu(){
-        if (!WorldState.getInstance().hasBeenToHomeMenu){
-            WorldState.getInstance().hasBeenToHomeMenu = true;
+        if (!WorldState.getInstance().isHasBeenToHomeMenu()){
+            WorldState.getInstance().setHasBeenToHomeMenu(true);
             Utility.awaitInput("The town mayor comes to your house and asks you to collect the Dragon's fee.");
             Utility.awaitInput("You have a few options as to where you want to gather gold from.");
             System.out.println("1 - Try to fundraise from townsfolk for the money." +
@@ -54,7 +54,7 @@ public class HomeMenu {
                     //todo Dragon Event class
                     break;
                 case 4:
-                    Utility.awaitInput("You have " + WorldState.getInstance().gold + " gold.");
+                    Utility.awaitInput("You have " + WorldState.getInstance().getGold() + " gold.");
                     homeMenu();
                     break;
                 case 5:

@@ -10,7 +10,7 @@
         = You overturn the table as you leap forward, lashing out for her throat.
         = You narrowly miss the killing blow.
         = The dragon whips her tail around and makes distance between you and her.
-        = "How dare you!" She snarls "I will raze this town until there is only dust!"
+        = "How dare you!" She snarls "I will raze this assets.town until there is only dust!"
         = She fireballs you.
         = You are blasted through a wall as you burn to crisp. GAMEOVER
     (hammer)

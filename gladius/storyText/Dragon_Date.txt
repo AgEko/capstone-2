@@ -1,9 +1,9 @@
 You enter the Tavern and Lirastrasza is there waiting for you.
 Sitting down at the table you begin your dragon date with Lirastrasza.
-    > Negotiate a better deal to pay her for the town's safety.
+    > Negotiate a better deal to pay her for the assets.town's safety.
         (ambush) {ambushEvent()}
         = Lirastrasza looks a bit let down. She agrees to 300 gold. (drunkDragon 200 gold)
-        = Ending the date she flys off into the night. The town is saved! ENDGAME
+        = Ending the date she flys off into the night. The assets.town is saved! ENDGAME
     > Hit on Lirastrasza with some smooth af pick-up lines.
         =" I'm going to need some fire resistance because you're hot."
             > Keep the charm comin'
@@ -17,9 +17,9 @@ Sitting down at the table you begin your dragon date with Lirastrasza.
                                 (dragonGF)
                                 (ambush){ambushEvent()}
                     ( G < 1000)
-                        = Too bad, Lirastrasza has a good time on the date and decides to spare the town free of charge.
+                        = Too bad, Lirastrasza has a good time on the date and decides to spare the assets.town free of charge.
                         (ambush){ambushEvent()}
-                        = Cool as Whip my man. The town is saved! ENDGAME.
+                        = Cool as Whip my man. The assets.town is saved! ENDGAME.
 
     > (booze) Pull out the bottle of booze and polish it off with Lirastraza.
         = You and the Lirastraza play a drinking game and get pretty trashed. You are now both drunk.

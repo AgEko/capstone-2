@@ -1,5 +1,5 @@
 ******In TOWN
-        There are a few people in town that might be able to donate.
+        There are a few people in assets.town that might be able to donate.
       //  [Total Gold collectible (!theft) = 300G , (theft) = more ]
 
         - Go to the Baker
@@ -26,7 +26,7 @@
                 +(torch)
                 -5G
             > Ask for a donation
-                = "If it means that we will still have a town by day's end: i'm in."
+                = "If it means that we will still have a assets.town by day's end: i'm in."
                 + 50 G
             > Steal from the ShopKeep
                 (knowsShopLovesKhanway)
@@ -42,7 +42,7 @@
             > Leave
 
 
-      - Go to the Noble Lord of the town
+      - Go to the Noble Lord of the assets.town
             > Ask for a donation
                 = "Begone with you, thou beggar! I shall have the guard remove you at once!"
                 = The guards tromp into the room and don't so much as slow down as they scoop you out to toss you out of the front gates.
@@ -64,7 +64,7 @@
                 = "Of course, of course we all have skin in this game, I'll give what I can if it means saving our home."
                 + 20 G
             > Rob the Tanner
-                = "Aw heck, first the dragon burns half the town and now this?" You make off with 45 G
+                = "Aw heck, first the dragon burns half the assets.town and now this?" You make off with 45 G
                 + 45 G
                 - karma 1
             > Leave
@@ -85,7 +85,7 @@
                             = "Then stop wasting my time, I have drinkin to do."
             > Talk to the Barkeep
                 >Ask for a donation
-                    = "Nah if this town burns down it'd be a blessing."
+                    = "Nah if this assets.town burns down it'd be a blessing."
                 > Order a drink
                     ( G > 5)
                         = "If that damn shopkeep keeps talkin about how that Khanway Vest is going to "Make dragons dead again" I'm gonna slug him. Lot of help that bastard has done for us recently."
@@ -102,16 +102,16 @@
 
       - Go to the Local Crime Boss
             > Ask for a donation
-                = "Now just why should we give a damn about what happens to the town? It ain't done nothin for us."
-                > No town means no money for you and your gang to steal.
-                    = "Oi, we'll just find another town, now beat it."
+                = "Now just why should we give a damn about what happens to the assets.town? It ain't done nothin for us."
+                > No assets.town means no money for you and your gang to steal.
+                    = "Oi, we'll just find another assets.town, now beat it."
                     = > Leave
-                > Hey theres no money in petty crime, Look at the Noble Lord. Owning this town in the real racket. Help the town and im sure we can get you to run the place.  It would all be legal, that just means no one will stop you,
-                    = "I like the sound of the town owin' the gang. Don't go forgettin',  you owe me too."
+                > Hey theres no money in petty crime, Look at the Noble Lord. Owning this assets.town in the real racket. Help the assets.town and im sure we can get you to run the place.  It would all be legal, that just means no one will stop you,
+                    = "I like the sound of the assets.town owin' the gang. Don't go forgettin',  you owe me too."
                         + 200 G
                         + (oweTheMob)
                         - karma 2
-                > "For the first time in your miserable existence you can be the good guy. Help the town and they'll owe you. "
+                > "For the first time in your miserable existence you can be the good guy. Help the assets.town and they'll owe you. "
                     = "Take this dog out back and give him what's for." The Crime Boss'es goons take you out back and take turns kicking you in the head. GAMEOVER
                 > Hey im looking to rob the Noble, I'm in need of something quiet to get past the guards.
                     = "Yeah i got a little something that could help. A blackjack, i'd be willing to let it go for 50 G."

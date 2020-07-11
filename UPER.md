@@ -17,7 +17,7 @@
     Pay off dragon to save your village.
     Turns of dragon is a lady. 
     Dragon thinks you're kinda cute (Pfft). Fight her now. || Try and go on a date with the dragon.
-        Talk to other adventurers in town to set up an ambush for the dragon. 
+        Talk to other adventurers in assets.town to set up an ambush for the dragon. 
     Steal stuff to go on a date with a dragon lady, she yelll as a waiter... yikes. 
     
     

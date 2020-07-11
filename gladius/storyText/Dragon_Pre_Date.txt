@@ -1,4 +1,4 @@
-You return to town, with gold in hand and a date with a dragon. Lirastrasza has not agreed to spare the village yet, so you plan your next move.
+You return to assets.town, with gold in hand and a date with a dragon. Lirastrasza has not agreed to spare the village yet, so you plan your next move.
     > Inform the townspeople of the date. Attempt to set an ambush for Lirastrasza, while you distract her on the date.
         = The townspeople agree that dealing with the dragon would be better than living in fear of it. They will ambush Lirastrasza on the date.
         (ambush)

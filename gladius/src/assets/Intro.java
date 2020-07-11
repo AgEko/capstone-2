@@ -11,7 +11,7 @@ public class Intro {
 
     }
     private void introToQuest(){
-        Utility.awaitInput("You're the resident adventurer the small town of Kleinstadt.");
+        Utility.awaitInput("You're the resident adventurer the small assets.town of Kleinstadt.");
         Utility.awaitInput("Awaken to an explosion, as you run out side there's a massive dragon!");
         Utility.awaitInput("Dragon roars \"Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth.\"");
         Utility.awaitInput("\"Any questions?\"");

@@ -33,7 +33,7 @@ The ambush that you have set up with the villagers has begun!
                         dragonPayoff()
                     > I had no idea, Lirastrasza.
                         = "A likely story mortal."
-                        = "Give me twice what I demand and i may spare your town"
+                        = "Give me twice what I demand and i may spare your assets.town"
                         dragonPayoff(x2!){
                             if
                             (talosMad){
@@ -52,10 +52,10 @@ The ambush that you have set up with the villagers has begun!
                     // she wins the fight just like before
                 (!drunkDragon)
                     =The numerous ambushers attack from all sides and overwhelm the dragon by sheer numbers taking full advantage of the confined space of the tavern.
-                    = The dragon is slain. The town is saved from her fire.
+                    = The dragon is slain. The assets.town is saved from her fire.
                     = The ambushers look to you sitting back and just watching.
                     = "What the hell man? You just sat back? Some of us died!"
-                        >"Yeah, but I didn't. Also the town is saved. You're welcome."
+                        >"Yeah, but I didn't. Also the assets.town is saved. You're welcome."
                             ="You're a jackass, come on gang. Drinks on me."
                             (lazyDragonKill)
                             - karma 2

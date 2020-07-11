@@ -41,8 +41,8 @@ public class Utility {
 
     public static void gameOver(String a){
         Utility.awaitInput(a);
-        System.out.println("As you die you never learn the fate of what happens to you town. Don't do that thing you did that get dead next time.");
-        WorldState.getInstance().gameOver = true;
+        System.out.println("As you die you never learn the fate of what happens to you assets.town. Don't do that thing you did that get dead next time.");
+        WorldState.getInstance().setGameOver(true);
     }
 
 //            try {

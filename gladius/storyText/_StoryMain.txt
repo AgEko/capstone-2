@@ -5,7 +5,7 @@ What is your name?
 
 Implement middleAges - fantasy setting in intro
 
-    You're the resident adventurer the small town of Kleinstadt.
+    You're the resident adventurer the small assets.town of Kleinstadt.
 
 Awaken to an explosion, as you run out side there's a massive dragon.
     Dragon roars " Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth. Any questions"?
@@ -23,7 +23,7 @@ Awaken to an explosion, as you run out side there's a massive dragon.
                 mainMenu()
 
 
-        The town mayor comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
+        The assets.town mayor comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
         HomeMenu()
             - Try to fundraise from townsfolk for the money.
                 > TOWN "You decide to ask the townsfolk to donate money to pay off the Dragon."
