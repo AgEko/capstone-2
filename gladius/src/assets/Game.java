@@ -14,8 +14,8 @@ public class Game {
     public void mainMenu(){
         System.out.println("Select an option");
         System.out.println("======");
-        System.out.println("0 - Exit assets.Game.");
-        System.out.println("1 - Start assets.Game.");
+        System.out.println("0 - Exit Game.");
+        System.out.println("1 - Start Game.");
 
         try{
             Scanner scanner = new Scanner(System.in);

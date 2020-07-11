@@ -5,15 +5,38 @@ public class WorldState {
 
     boolean gameOver;
 
+    boolean hasBeenToHomeMenu;
+
+    boolean stoleFromBaker;
+    boolean stoleFromShop;
+    boolean stoleFromTanner;
+    boolean stoleFromNoble;
+    boolean stoleFromBarkeep;
+    boolean stoleFromDrunk;
+    boolean stoleFromTemple;
+
+    boolean isInBakery;
+    boolean isInTannery;
+    boolean isInShop;
+    boolean isAtNoble;
+    boolean isInTavern;
+    boolean isInTemple;
+
+    boolean tookDonationBaker;
+    boolean tookDonationTanner;
+    boolean tookDonationShop;
+
+
     int gold = 0;
     int karma = 0;
-    boolean knowShopLovesKhan;
+    boolean knowShopLovesKhanway;
     boolean oweTheMob;
     boolean isTalosMad;
 
     boolean stoleFromLich;
-    boolean lichQuest;
+    boolean isOnLichQuest;
     boolean lichQuestSuccess;
+    boolean visitedCrypt;
 
     boolean ambush;
     boolean drunkDragon;

@@ -9,6 +9,11 @@ public class Utility {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
+    public static void awaitInput(String a) {
+        System.out.println(a);
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+    }
 
     public static void singleInput(String a) {
         System.out.println("1 - " + a);
@@ -32,12 +37,42 @@ public class Utility {
         }
     }
 
+
+
     public static void gameOver(String a){
-        System.out.println(a);
-        Utility.awaitInput();
+        Utility.awaitInput(a);
         System.out.println("As you die you never learn the fate of what happens to you town. Don't do that thing you did that get dead next time.");
         WorldState.getInstance().gameOver = true;
     }
+
+//            try {
+//        Scanner a = new Scanner(System.in);
+//        int choice = a.nextInt();
+//
+//        switch (choice){
+//            case 1:
+//                break;
+//            case 2:
+//                break;
+//            case 3:
+//                break;
+//            case 4:
+//                break;
+//            case 5:
+//                break;
+//            case 6:
+//                break;
+//            case 7:
+//                break;
+//            case 8:
+//                break;
+//            default:
+//        }
+//
+//    } catch (InputMismatchException e){
+//        System.out.println("That is not a valid option.");
+//        townMenu();
+//    }
 
 
 }

@@ -85,7 +85,7 @@
                             = "Then stop wasting my time, I have drinkin to do."
             > Talk to the Barkeep
                 >Ask for a donation
-                    = "Nah if this town burns down i'd be a blessing."
+                    = "Nah if this town burns down it'd be a blessing."
                 > Order a drink
                     ( G > 5)
                         = "If that damn shopkeep keeps talkin about how that Khanway Vest is going to "Make dragons dead again" I'm gonna slug him. Lot of help that bastard has done for us recently."
@@ -103,11 +103,11 @@
       - Go to the Local Crime Boss
             > Ask for a donation
                 = "Now just why should we give a damn about what happens to the town? It ain't done nothin for us."
-                > No town means no money for your gang to steal.
+                > No town means no money for you and your gang to steal.
                     = "Oi, we'll just find another town, now beat it."
                     = > Leave
                 > Hey theres no money in petty crime, Look at the Noble Lord. Owning this town in the real racket. Help the town and im sure we can get you to run the place.  It would all be legal, that just means no one will stop you,
-                    = "I like the sound of the town owin' the gang. Don't go forgettin' you owe me too."
+                    = "I like the sound of the town owin' the gang. Don't go forgettin',  you owe me too."
                         + 200 G
                         + (oweTheMob)
                         - karma 2
