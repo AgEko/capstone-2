@@ -3,9 +3,12 @@ package assets;
 public class WorldState {
     private static WorldState instance;
 
+
     private boolean gameOver;
 
     private boolean hasBeenToHomeMenu;
+
+    private boolean hasBlackjack;
 
     private boolean stoleFromBaker;
     private boolean stoleFromShop;
@@ -45,6 +48,7 @@ public class WorldState {
     private boolean dragonSoloKill;
     private boolean lazyDragonKill;
 
+    public Game game;
 
 
     public static WorldState getInstance(){
@@ -55,7 +59,22 @@ public class WorldState {
     }
 
     public static void reset(){
-        instance = null;
+        instance = new WorldState();
+    }
+
+    public static void isSessionTerminated(boolean quit){
+        for (int i = 0; i < 10; i++){
+            try {
+                quit = true;
+            } catch (Exception e){
+                System.out.println("No more backing up!");
+            }
+        }
+
+//        if (quit && WorldState.getInstance().isGameOver()){
+//            return true;
+//        }
+//        return false;
     }
 
     public static void setInstance(WorldState instance) {
@@ -328,5 +347,13 @@ public class WorldState {
 
     public void setLazyDragonKill(boolean lazyDragonKill) {
         this.lazyDragonKill = lazyDragonKill;
+    }
+
+    public boolean isHasBlackjack() {
+        return hasBlackjack;
+    }
+
+    public void setHasBlackjack(boolean hasBlackjack) {
+        this.hasBlackjack = hasBlackjack;
     }
 }

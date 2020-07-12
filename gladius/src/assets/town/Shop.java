@@ -51,7 +51,6 @@ public class Shop extends Scene{
                 case 2:
                     if (!WorldState.getInstance().isKnowShopLovesKhanway()){
                         awaitInput("You fail to find an opening to make a grab at the cash. The shopkeep is on his game like white on rice.");
-                        interaction();
                     } else if (!WorldState.getInstance().isStoleFromShop() && WorldState.getInstance().isKnowShopLovesKhanway()){
                         awaitInput("\"You distract the Shopkeep by telling him presidential candidate Khanway Vest is campaigning outside.\"");
                         awaitInput("He excitedly runs outside and you safely empty the till.");

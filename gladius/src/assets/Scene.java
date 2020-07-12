@@ -7,8 +7,8 @@ public abstract class Scene {
 
     protected static void awaitInput(String a) {
         System.out.println(a);
-//        Scanner scanner = new Scanner(System.in);
-//        scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
     }
 
     protected static void singleInput(String a) {
@@ -34,9 +34,30 @@ public abstract class Scene {
 
     protected static void gameOver(String a){
         Scene.awaitInput(a);
+
         System.out.println("As you die you never learn the fate of what happens to your town. Don't do that thing you did that get dead next time.");
         WorldState.getInstance().setGameOver(true);
+        WorldState.getInstance().game.setGameState(GameState.GameIntro);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //            try {
 //        Scanner a = new Scanner(System.in);

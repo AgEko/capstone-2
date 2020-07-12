@@ -1,9 +1,6 @@
 package assets;
 
-import assets.town.Baker;
-import assets.town.Noble;
 import assets.town.Shop;
-import assets.town.Tanner;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -44,23 +41,20 @@ public class Town extends Scene{
                     break;
                 case 1:
                     awaitInput("You head to the baker.");
-                    Baker baker = new Baker();
-                    baker.interaction();
+                    WorldState.getInstance().game.setGameState(GameState.Baker);
                     break;
                 case 2:
                     awaitInput("You head to the General Shop.");
-                    Shop shop = new Shop();
-                    shop.interaction();
+                    WorldState.getInstance().game.setGameState(GameState.Shop);
+                    new Shop().interaction();
                     break;
                 case 3:
                     awaitInput("You head to the Tanner");
-                    Tanner tanner = new Tanner();
-                    tanner.interaction();
+                    WorldState.getInstance().game.setGameState(GameState.Tanner);
                     break;
                 case 4:
                     awaitInput("You head to the Noble Lord's Estate");
-                    Noble noble = new Noble();
-                    noble.interaction();
+                    WorldState.getInstance().game.setGameState(GameState.Noble);
                     break;
                 case 5:
                     break;

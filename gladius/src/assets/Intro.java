@@ -5,21 +5,14 @@ import java.util.Scanner;
 
 public class Intro extends Scene {
 
-    public  void adventureIntro(){
-        introToQuest();
-        responseToQuest();
+    public void introToQuest(){
+        boolean quit = false;
+        int choice = -1;
 
-    }
-    private void introToQuest(){
         awaitInput("You're the resident adventurer the small town of Kleinstadt.");
         awaitInput("Awaken to an explosion, as you run out side there's a massive dragon!");
         awaitInput("Dragon roars \"Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth.\"");
         awaitInput("\"Any questions?\"");
-    }
-
-    private void responseToQuest(){
-        boolean quit = false;
-        int choice = -1;
 
         while (!quit){
             System.out.println("1 - \"Hey Dragon, Up yours!\"");
@@ -47,7 +40,7 @@ public class Intro extends Scene {
                     awaitInput("\"Use this signal when you have the gold.\"");
                     System.out.println("You receive a Dragon Flare.");
                     //Todo: add dragonFlare
-                    new HomeMenu().homeMenu();
+                    WorldState.getInstance().game.setGameState(GameState.HomeMenu);;
                     break;
                 default:
                     System.out.println("That is not a valid option.");

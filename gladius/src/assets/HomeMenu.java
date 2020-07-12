@@ -4,9 +4,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HomeMenu {
-    public void menu(){
-        homeMenu();
-    }
 
     public void homeMenu(){
         if (!WorldState.getInstance().isHasBeenToHomeMenu()){
@@ -24,7 +21,7 @@ public class HomeMenu {
         int choice = -1;
 
         while(!quit) {
-            System.out.println("1 - Try to fundraise from townsfolk in Kleinstadt for the gold." +
+            System.out.println("1 - Try to fundraise from townsfolk of Kleinstadt for the gold." +
                     "\n 2 - You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot." +
                     "\n 3 - Summon the dragon with the dragon flare." +
                     "\n 4 - Check your current gold." +
@@ -40,8 +37,7 @@ public class HomeMenu {
                     quit = true;
                     break;
                 case 1:
-                    Town town = new Town();
-                    town.townMenu();
+                    WorldState.getInstance().game.setGameState(GameState.TownMenu);
                     break;
                 case 2:
                     //todo goto dungeon(S?)
