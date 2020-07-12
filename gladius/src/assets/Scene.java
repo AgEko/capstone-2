@@ -14,6 +14,7 @@ public abstract class Scene {
 //        scanner.nextLine();
     }
 
+    //Todo GET OFF MY LAWN MONSTER
     protected static void singleInput(String a) {
         System.out.println("1 - " + a);
 
@@ -40,7 +41,9 @@ public abstract class Scene {
 
         System.out.println("As you die you never learn the fate of what happens to your town. Don't do that thing you did that get dead next time.");
         WorldState.getInstance().setGameOver(true);
+//        WorldState.reset();
         WorldState.getInstance().game.setGameState(GameState.GameIntro);
+
     }
 
     protected static boolean objectExists(List<Item> objectList, Class classType){

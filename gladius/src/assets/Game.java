@@ -32,6 +32,7 @@ public class Game {
             case 0:
                 break;
             case 1:
+                
                 setGameState(GameState.QuestIntro);
                 break;
             default:
@@ -96,9 +97,6 @@ public class Game {
             case Dungeon:
                 new Dungeon().interaction();
                 break;
-            case Dungeon_Visited:
-                new Dungeon_Visited().interaction();
-                break;
             case Dungeon_Entrance:
                 new Dungeon_Entrance().interaction();
                 break;
@@ -106,17 +104,39 @@ public class Game {
                 new Dungeon_Lich().interaction();
                 break;
             case Dungeon_Apology:
-                new Dungeon_Apology();
+                new Dungeon_Apology().interaction();
                 break;
             case Dungeon_KeepStabbing:
-                new Dungeon_KeepStabbing();
+                new Dungeon_KeepStabbing().interaction();
                 break;
             case Dungeon_BoneregardChat:
-                new Dungeon_BoneregardChat();
+                new Dungeon_BoneregardChat().interaction();
                 break;
             case Dungeon_BoneregardInsult:
-                new Dungeon_BoneregardInsult();
+                new Dungeon_BoneregardInsult().interaction();
                 break;
+            case Dungeon_Lich_QuestV1:
+                new Dungeon_Lich_QuestV1().interaction();
+                break;
+            case Dungeon_Lich_QuestV2:
+                new Dungeon_Lich_QuestV2().interaction();
+                break;
+            case Dungeon_Lich_Attack:
+                new Dungeon_Lich_Attack().interaction();
+                break;
+            case Dungeon_Lich_Attack_HolyWater:
+                new Dungeon_Lich_Attack_HolyWater().interaction();
+                break;
+            case Dungeon_Visited:
+                new Dungeon_Visited().interaction();
+                break;
+            case Dungeon_Visited_StoleGold:
+                new Dungeon_Visited_StoleGold().interaction();
+                break;
+            case Dungeon_Visited_StoleGold_Attack:
+                new Dungeon_Visited_StoleGold_Attack().interaction();
+                break;
+
 
 
 

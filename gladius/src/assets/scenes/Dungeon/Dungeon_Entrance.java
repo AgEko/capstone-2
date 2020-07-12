@@ -22,6 +22,7 @@ public class Dungeon_Entrance extends Scene {
             awaitInput("\"Welcome to the Blarrg encampment traveler. I am Mr. Boneregard servant of Lich Thel'zan.\"");
             awaitInput("You see the face of the figure and its a skeleton!");
             WorldState.getInstance().setMetBoneregard(true);
+            WorldState.getInstance().setVisitedCrypt(true);
         }
 
         System.out.println("1 - \"You can talk?!\"" +

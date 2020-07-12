@@ -54,11 +54,12 @@
                 The Lich turns his ethereal gaze your direction, although chilling to behold, you sense no malice in his unearthly visage.
                 "Ah yes, I am Thel'zan. The ruling Lich over this crypt. For many years we have attempted to isolate ourselves from the outside world and advance our work in rehabilitating skeletons to their former lives of flesh, freeing them from the Black Rage"
                 "Isolation has been difficult as of the last few years, our research supplies have all but turned to dust, using out-dated tomes and old equipment our work has come to an agonizing halt."
+
                     > "Sound rough Thel'zan, can't you go get more supplies?"
                         ="If it were only so easy. Believe it or not many humans care for the undead for understandable reasons. We cannot trade for supplies and I have forbidden my servants from ransacking trade routes.
                             Keeping only to attacking bandit camps."
                         > "Do you want me to get you some supplies?"
-                            ="Oh no no, that would only solve our deficit for a time, what I would ask of you is that you speak you the traders in your assets.scenes and convince them to trade with us.
+                            ="Oh no no, that would only solve our deficit for a time, what I would ask of you is that you speak you the traders in your town and convince them to trade with us.
                                 Only then will we have a steady influx of regents to continue our work."
                                 >"I would be honored to help Thel'zan."
                                     =Thel'zan is noticeably excited, "Good! Many that come through here have not show us the kindness you have this day! Now go, I eagerly await your return. Mr. Boneregard please escort our guest out,"
@@ -66,7 +67,8 @@
                                 >"Sorry I can't help you."
                                     ="I do understand, the offer is still available should you change your mind. Mr. Boneregard please escort our guest out."
                                     =Leave Dungeon
-                        > "I can't help you Thel'zan, I have enough problems of my own." You explain your quest to save your assets.scenes.
+
+                        > "I can't help you Thel'zan, I have enough problems of my own." You explain your quest to save your town.
                            = "I see that is a most unfortunate circumstance you are in."
                                 "We do collect much gold from the bandits that we attack, I have no use for gold without trade I am willing to pay you to speak to the townsfolk and open trade between us."
                                 >"I change my mind, I'm in!"
@@ -82,6 +84,7 @@
                             = "Forgive me my Lich, this adventurer presented them self quite differently upon entry to your Crypt. I shall handle this with due haste."
                             = "No need Mr. Boneregard." He dismisses Mr. Boneregard with a wave. "I shall deal with this interloper."
                             = You are lifted off your feet and expunged of your soft tissue. As the flesh is torn from your bones your mind crumples into madness. GAMEOVER
+
                         (booze)
                         >Use booze as a fire bomb
                             =The Lich howls as the fire spreads across the room engulfing him and Mr. Boneregard in flames. Although it probably wont kill the skeletons it has bought you enough time to grab what loot you can and make a get away.
@@ -94,11 +97,14 @@
                                 =You leap out of the room into a pitch black passageway. You attempt to feel your way towards the exit.
                                 = Unfortunately for you skeletons can see in the dark and you just set their boss on fire.
                                 You are dragged back to the underbelly of the dungeon where you are tortured to death with experimentations. GAMEOVER
+
+
                         (holyWater)
                         > Use the holyWater on the Lich
                             = You throw the Holy Water on the Lich and Mr. Boneregard.
                             = You expect the Lich to be hurt by the Holy Water but Talos is the Lord of Storms, a chaotic evil deity.
                             = After a brief shudder the Lich blankly hovers before you. Apparently charmed. He awaits your command.
+
                             (charmedLich)
                             > "How do I kill you skeletons?"
                                 The Lich gives a hollow, slow response, "Fire... dragon fire... will seal our fate..."
@@ -118,6 +124,7 @@
                                 Mr. Boneregard who is also under your command leads you to the entrance of the dungeon.
                                 dungeonMenu()
                              }
+
 
 (visitedCrypt)
     (stoleFromLich)

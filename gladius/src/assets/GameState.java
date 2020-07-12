@@ -22,11 +22,17 @@ public enum GameState {
 
     Dungeon,
     Dungeon_Entrance,
-    Dungeon_Visited,
-    Dungeon_Lich,
     Dungeon_Apology,
     Dungeon_KeepStabbing,
     Dungeon_BoneregardChat,
     Dungeon_BoneregardInsult,
+    Dungeon_Lich,
+    Dungeon_Lich_QuestV1,
+    Dungeon_Lich_QuestV2,
+    Dungeon_Lich_Attack,
+    Dungeon_Lich_Attack_HolyWater,
+    Dungeon_Visited,
+    Dungeon_Visited_StoleGold,
+    Dungeon_Visited_StoleGold_Attack,
 
 }

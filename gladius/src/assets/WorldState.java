@@ -8,7 +8,7 @@ public class WorldState {
 
     private boolean hasBeenToHomeMenu;
 
-    private boolean hasBlackjack;
+    private boolean hasBlackjack; //todo its an item now, FIX I SAY!!! NI!
 
     private boolean stoleFromBaker;
     private boolean stoleFromShop;
@@ -39,9 +39,11 @@ public class WorldState {
     private boolean isTalosMad;
 
     private boolean metBoneregard;
+    private boolean metLich;
     private boolean stoleFromLich;
     private boolean isOnLichQuest;
     private boolean lichQuestSuccess;
+    private boolean lichQuestComplete;
     private boolean visitedCrypt;
 
     private boolean ambush;
@@ -385,5 +387,21 @@ public class WorldState {
 
     public void setMetBoneregard(boolean metBoneregard) {
         this.metBoneregard = metBoneregard;
+    }
+
+    public boolean isMetLich() {
+        return metLich;
+    }
+
+    public void setMetLich(boolean metLich) {
+        this.metLich = metLich;
+    }
+
+    public boolean isLichQuestComplete() {
+        return lichQuestComplete;
+    }
+
+    public void setLichQuestComplete(boolean lichQuestComplete) {
+        this.lichQuestComplete = lichQuestComplete;
     }
 }

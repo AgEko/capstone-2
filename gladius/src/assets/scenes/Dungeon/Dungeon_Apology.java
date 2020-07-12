@@ -13,7 +13,7 @@ public class Dungeon_Apology extends Scene {
         int choice = -1;
 
         System.out.println("1 - Apologize to Mr.Boneregard and explain your quest to help your village.." +
-                "\n1 - Stab him a second time! This time with more chutzpah!");
+                "\n2 - Stab him a second time! This time with more chutzpah!");
         try {
             Scanner a = new Scanner(System.in);
             choice = a.nextInt();

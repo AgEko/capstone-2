@@ -4,35 +4,44 @@ import assets.GameState;
 import assets.Scene;
 import assets.WorldState;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 public class Dungeon_Visited extends Scene {
 
     public void interaction(){
-        int choice = -1;
 
-        System.out.println("0 - Leave and go Home" +
-                "\n1 - Enter the dungeon.");
-        try {
-            Scanner a = new Scanner(System.in);
-            choice = a.nextInt();
-        } catch (InputMismatchException e){
-            System.out.println("That is not a valid option.");
+        if(WorldState.getInstance().isStoleFromLich()){
+            WorldState.getInstance().game.setGameState(GameState.Dungeon_Visited_StoleGold);
+        } else if (!WorldState.getInstance().isOnLichQuest()){
+            WorldState.getInstance().game.setGameState(GameState.Dungeon_Lich);
+        } else {
+            lichQuestStatus();
+        }
+
+    }
+
+    private void lichQuestStatus(){
+        awaitInput("Mr.Boneregard greets you. \"Welcome friend, do you bring good news?\"");
+        if (!WorldState.getInstance().isLichQuestComplete()){
+            if(!WorldState.getInstance().isLichQuestSuccess()){
+                singleInput("Not just yet.");
+                awaitInput("\"Very well, please return when you succeed establishing trade for us.\"");
+                WorldState.getInstance().game.setGameState(GameState.Dungeon);
+            } else {
+                singleInput(" You inform Mr. Bonereguard with the details of the arrangement that the shopkeep proposed.");
+                awaitInput("\"Outstanding work. Here is payment for your assistance adventurer. You have our gratitude.\"");
+                awaitInput("You leave counting your gold. 400 big ones! Noice!");
+                WorldState.getInstance().addGold(400);
+                WorldState.getInstance().setLichQuestComplete(true);
+                WorldState.getInstance().addKarma(1);
+                WorldState.getInstance().game.setGameState(GameState.Dungeon);
+            }
+        } else {
+            awaitInput("Mr. Boneregard greets you. \"Thank you for your assistance, we have no need for your services at this time.\"");
+            awaitInput("You leave the dungeon.");
             WorldState.getInstance().game.setGameState(GameState.Dungeon);
         }
-        switch (choice){
-            case 0:
-                awaitInput("You head Home.");
-                WorldState.getInstance().game.setGameState(GameState.HomeMenu);
-                break;
-            case 1:
-                awaitInput("You venture into the Dungeon.");
-                WorldState.getInstance().game.setGameState(GameState.Dungeon_Entrance);
-                break;
-            default:
-                System.out.println("That is not a valid option.");
-                WorldState.getInstance().game.setGameState(GameState.Dungeon);
-        }
+
     }
+
+
+
 }
