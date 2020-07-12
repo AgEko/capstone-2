@@ -8,8 +8,6 @@ public class Main {
         Game newGame = new Game();
         WorldState.getInstance().game = newGame;
         WorldState.getInstance().game.setGameState(GameState.GameIntro);
-        newGame.startGame();
-
     }
 
 

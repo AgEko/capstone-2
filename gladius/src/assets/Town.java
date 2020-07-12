@@ -1,6 +1,6 @@
 package assets;
 
-import assets.town.Shop;
+import assets.scenes.Shop;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -14,10 +14,8 @@ public class Town extends Scene{
     }
 
     public void townMenuAction(){
-        boolean quit = false;
         int choice = -1;
 
-        while (!quit){
             awaitInput("You arrive in the town of Kleinstadt.");
             System.out.println("0 - Go home" +
                     "\n1 - Go to the Baker." +
@@ -32,12 +30,13 @@ public class Town extends Scene{
                 choice = a.nextInt();
             } catch (InputMismatchException e){
                 System.out.println("That is not a valid option.");
+                WorldState.getInstance().game.setGameState(GameState.TownMenu);
             }
 
             switch (choice){
                 case 0:
                     awaitInput("You leave town.");
-                    quit = true;
+                    WorldState.getInstance().game.setGameState(GameState.HomeMenu);
                     break;
                 case 1:
                     awaitInput("You head to the baker.");
@@ -59,7 +58,6 @@ public class Town extends Scene{
                 case 5:
                     awaitInput("You head to the Tavern");
                     WorldState.getInstance().game.setGameState(GameState.Tavern);
-
                     break;
                 case 6:
                     break;
@@ -67,8 +65,8 @@ public class Town extends Scene{
                     break;
                 default:
                     System.out.println("That is not a valid option.");
+                    WorldState.getInstance().game.setGameState(GameState.TownMenu);
             }
-        }
     }
 
 

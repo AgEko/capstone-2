@@ -1,7 +1,9 @@
-package assets.town;
+package assets.scenes;
 
+import assets.GameState;
 import assets.Scene;
 import assets.WorldState;
+import assets.items.Hammer;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -9,7 +11,6 @@ import java.util.Scanner;
 public class Shop extends Scene{
 
     public void interaction(){
-        boolean quit = false;
         int choice = -1;
 
         if (!WorldState.getInstance().isInShop()){
@@ -17,7 +18,6 @@ public class Shop extends Scene{
             WorldState.getInstance().setInShop(true);
         }
 
-        while(!quit){
             System.out.println("0 - Leave" +
                     "\n1 - Ask for a donation." +
                     "\n2 - Steal from the register." +
@@ -32,11 +32,12 @@ public class Shop extends Scene{
                 choice = a.nextInt();
             } catch (InputMismatchException e){
                 System.out.println("That is not a valid option.");
+                WorldState.getInstance().game.setGameState(GameState.Shop);
             }
             switch (choice){
                 case 0:
                     WorldState.getInstance().setInShop(false);
-                    quit = true;
+                    WorldState.getInstance().game.setGameState(GameState.TownMenu);
                     break;
                 case 1:
                     if (!WorldState.getInstance().isTookDonationShop()){
@@ -47,6 +48,7 @@ public class Shop extends Scene{
                     } else {
                         awaitInput("You already took a donation!");
                     }
+                    WorldState.getInstance().game.setGameState(GameState.Shop);
                     break;
                 case 2:
                     if (!WorldState.getInstance().isKnowShopLovesKhanway()){
@@ -61,22 +63,27 @@ public class Shop extends Scene{
                     } else {
                         awaitInput("You already took an unwilling donation! You scoundrel!");
                     }
+                    WorldState.getInstance().game.setGameState(GameState.Shop);
                     break;
                 case 3:
                     if (WorldState.getInstance().getGold() > 50){
+                        WorldState.getInstance().game.player.getInventory().add(new Hammer("Warhammer"));
                         awaitInput("You buy a Warhammer for 50 gold. Oof! It's heavy!");
                         WorldState.getInstance().subtractGold(50);
                     } else {
                         awaitInput("You don't have enough gold.");
                     }
+                    WorldState.getInstance().game.setGameState(GameState.Shop);
                     break;
                 case 4:
                     if (WorldState.getInstance().getGold() > 15){
+                        WorldState.getInstance().game.player.getInventory().add(new Hammer("Torch"));
                         awaitInput("You buy a Torch for 15 gold. This is sure to light any dark passageways!");
                         WorldState.getInstance().subtractGold(15);
                     } else {
                         awaitInput("You don't have enough gold.");
                     }
+                    WorldState.getInstance().game.setGameState(GameState.Shop);
                     break;
                 case 5:
                     if (WorldState.getInstance().isOnLichQuest()){
@@ -87,11 +94,12 @@ public class Shop extends Scene{
                     } else {
                         awaitInput("That is not a valid option.");
                     }
+                    WorldState.getInstance().game.setGameState(GameState.Shop);
                     break;
                 default:
                     System.out.println("That is not a valid option.");
+                    WorldState.getInstance().game.setGameState(GameState.Shop);
             }
-        }
     }
 
 }

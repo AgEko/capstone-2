@@ -10,5 +10,8 @@ public enum GameState {
     Shop,
     Tanner,
     Noble,
-    Tavern
+    Tavern,
+    Tavern_Drunk,
+    Tavern_Drunk_Buy,
+    Tavern_Drunk_Steal
 }

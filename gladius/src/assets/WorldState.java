@@ -234,6 +234,9 @@ public class WorldState {
     public void subtractGold(int gold) {
         this.gold -= gold;
     }
+    public void divideGold(int gold){
+        this.gold /= gold;
+    }
 
     public int getKarma() {
         return karma;

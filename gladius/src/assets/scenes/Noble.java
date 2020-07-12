@@ -1,5 +1,6 @@
-package assets.town;
+package assets.scenes;
 
+import assets.GameState;
 import assets.Scene;
 import assets.WorldState;
 
@@ -9,7 +10,6 @@ import java.util.Scanner;
 public class Noble extends Scene {
 
     public void interaction(){
-        boolean quit = false;
         int choice = -1;
         if (!WorldState.getInstance().isAtNoble()){
             awaitInput("You approach the estate a guard halts your progress. From behind him th Noble Lord calls out rather pointedly:" +
@@ -17,7 +17,6 @@ public class Noble extends Scene {
             WorldState.getInstance().setAtNoble(true);
 
             WorldState.getInstance();
-            while (!quit){
             System.out.println("0 - Leave" +
                     "\n1 - Ask for a donation" +
                     "\n2 - Steal from the Noble");
@@ -27,17 +26,18 @@ public class Noble extends Scene {
                 choice = a.nextInt();
             } catch (InputMismatchException e){
                 System.out.println("That is not a valid option.");
+                WorldState.getInstance().game.setGameState(GameState.Noble);
             }
             switch (choice){
                 case 0:
                     WorldState.getInstance().setAtNoble(false);
-                    quit = true;
+                    WorldState.getInstance().game.setGameState(GameState.TownMenu);
                     break;
                 case 1:
                     awaitInput("\"Begone with you, thou beggar! Guards, remove this tripe at once!\"");
                     awaitInput("The guards tromp towards you and don't even slow down as they scoop you up and toss you out of the premises.");
                     WorldState.getInstance().setAtNoble(false);
-                    quit = true;
+                    WorldState.getInstance().game.setGameState(GameState.TownMenu);
                     break;
                 case 2:
                     if (!WorldState.getInstance().isStoleFromNoble()  && !WorldState.getInstance().isHasBlackjack()){
@@ -50,17 +50,18 @@ public class Noble extends Scene {
                         awaitInput("You receive 450 gold");
                         WorldState.getInstance().addGold(450);
                         WorldState.getInstance().subtractKarma(2);
+                        WorldState.getInstance().game.setGameState(GameState.Noble);
                         break;
                     } else {
                         awaitInput("You already burglarized the Noble. It would be far too rash go back for seconds.");
                         WorldState.getInstance().setAtNoble(false);
-                        quit = true;
+                        WorldState.getInstance().game.setGameState(GameState.Noble);
                         break;
                     }
                 default:
                     System.out.println("That is not a valid option.");
+                    WorldState.getInstance().game.setGameState(GameState.Noble);
                 }
-            }
         }
     }
 

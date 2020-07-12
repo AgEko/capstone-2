@@ -1,6 +1,6 @@
 package assets;
 
-import assets.town.*;
+import assets.scenes.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -68,7 +68,16 @@ public class Game {
                 new Noble().interaction();
                 break;
             case Tavern:
-                //new Tavern().interaction();
+                new Tavern().interaction();
+                break;
+            case Tavern_Drunk:
+                new Tavern_Drunk().interaction();
+                break;
+            case Tavern_Drunk_Buy:
+                new Tavern_Drunk_Buy().interaction();
+                break;
+            case Tavern_Drunk_Steal:
+                new Tavern_Drunk_Steal().interaction();
                 break;
 
         }

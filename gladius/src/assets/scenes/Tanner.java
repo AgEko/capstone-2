@@ -1,5 +1,6 @@
-package assets.town;
+package assets.scenes;
 
+import assets.GameState;
 import assets.Scene;
 import assets.WorldState;
 
@@ -9,7 +10,6 @@ import java.util.Scanner;
 public class Tanner extends Scene{
 
     public void interaction(){
-        boolean quit = false;
         int choice = -1;
 
         if(!WorldState.getInstance().isInTannery()){
@@ -17,7 +17,6 @@ public class Tanner extends Scene{
             WorldState.getInstance().setInTannery(true);
         }
 
-        while (!quit){
             System.out.println("0 - Leave" +
                 "\n1 - Ask for a donation" +
                 "\n2 - Rob the Tanner");
@@ -27,11 +26,13 @@ public class Tanner extends Scene{
                 choice = a.nextInt();
             } catch (InputMismatchException e){
                 System.out.println("That is not a valid option.");
+                WorldState.getInstance().game.setGameState(GameState.Tanner);
+
             }
             switch (choice){
                 case 0:
                     WorldState.getInstance().setInTannery(false);
-                    quit = true;
+                    WorldState.getInstance().game.setGameState(GameState.TownMenu);
                     break;
                 case 1:
                     if (WorldState.getInstance().isStoleFromTanner()){
@@ -44,6 +45,7 @@ public class Tanner extends Scene{
                     } else {
                         awaitInput("You already took a donation!");
                     }
+                    WorldState.getInstance().game.setGameState(GameState.Tanner);
                     break;
                 case 2:
                     if (!WorldState.getInstance().isStoleFromTanner()){
@@ -54,10 +56,12 @@ public class Tanner extends Scene{
                     }else {
                         awaitInput("You already robbed the Tanner, you're a jerk bro.");
                     }
+                    WorldState.getInstance().game.setGameState(GameState.Tanner);
                     break;
                 default:
                     System.out.println("That is not a valid option.");
+                    WorldState.getInstance().game.setGameState(GameState.Tanner);
+
             }
-        }
     }
 }

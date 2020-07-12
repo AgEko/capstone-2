@@ -1,7 +1,6 @@
 package assets;
 
-import assets.items.Booze;
-import assets.items.DragonFlare;
+import assets.items.Item;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -20,10 +19,8 @@ public class HomeMenu extends Scene {
     }
 
     private void homeMenuAction(){
-        boolean quit = false;
-        int choice = -1;
+       int choice = -1;
 
-        while(!quit) {
             System.out.println("1 - Try to fundraise from townsfolk of Kleinstadt for the gold." +
                     "\n 2 - You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot." +
                     "\n 3 - Summon the dragon with the dragon flare." +
@@ -34,10 +31,10 @@ public class HomeMenu extends Scene {
                 choice = scanner.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("That is not a valid option.");
+                WorldState.getInstance().game.setGameState(GameState.HomeMenu);
             }
             switch (choice) {
                 case 0:
-                    quit = true;
                     break;
                 case 1:
                     WorldState.getInstance().game.setGameState(GameState.TownMenu);
@@ -49,20 +46,20 @@ public class HomeMenu extends Scene {
                     //todo Dragon Event class
                     break;
                 case 4:
-                    Scene.awaitInput("You have " + WorldState.getInstance().getGold() + " gold.");
+                    awaitInput("You have " + WorldState.getInstance().getGold() + " gold.");
+                    WorldState.getInstance().game.setGameState(GameState.HomeMenu);
                     break;
                 case 5:
-                    //todo Reach player, display inventory array in for loop
-                    System.out.println(WorldState.getInstance().game.player.inventory.get(0).getName());
-
-                    System.out.println(objectExists(WorldState.getInstance().game.player.inventory, DragonFlare.class));
-                    System.out.println(objectExists(WorldState.getInstance().game.player.inventory, Booze.class));
-
+                    for(Item a : WorldState.getInstance().game.player.inventory){
+                        System.out.println(a.getName());
+                    }
+                    awaitInput("");
+                    WorldState.getInstance().game.setGameState(GameState.HomeMenu);
                     break;
                 default:
                     System.out.println("That is not a valid option.");
+                    WorldState.getInstance().game.setGameState(GameState.HomeMenu);
             }
-        }
 
 
     }
