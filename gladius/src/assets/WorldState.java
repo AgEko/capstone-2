@@ -23,6 +23,7 @@ public class WorldState {
     private boolean isInShop;
     private boolean isAtNoble;
     private boolean isInTavern;
+    private boolean isAtCrimeBoss;
     private boolean isInTemple;
 
     private boolean tookDonationBaker;
@@ -358,5 +359,13 @@ public class WorldState {
 
     public void setHasBlackjack(boolean hasBlackjack) {
         this.hasBlackjack = hasBlackjack;
+    }
+
+    public boolean isAtCrimeBoss() {
+        return isAtCrimeBoss;
+    }
+
+    public void setAtCrimeBoss(boolean atCrimeBoss) {
+        isAtCrimeBoss = atCrimeBoss;
     }
 }

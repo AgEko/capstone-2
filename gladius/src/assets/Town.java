@@ -60,8 +60,11 @@ public class Town extends Scene{
                     WorldState.getInstance().game.setGameState(GameState.Tavern);
                     break;
                 case 6:
+                    awaitInput("You head to the CrimeBoss's evil crime lair.");
+                    WorldState.getInstance().game.setGameState(GameState.CrimeBoss);
                     break;
                 case 7:
+
                     break;
                 default:
                     System.out.println("That is not a valid option.");

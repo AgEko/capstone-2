@@ -13,5 +13,9 @@ public enum GameState {
     Tavern,
     Tavern_Drunk,
     Tavern_Drunk_Buy,
-    Tavern_Drunk_Steal
+    Tavern_Drunk_Steal,
+    CrimeBoss,
+    CrimeBoss_Buy,
+    CrimeBoss_DonationReply,
+
 }

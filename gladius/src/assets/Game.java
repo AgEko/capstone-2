@@ -79,6 +79,17 @@ public class Game {
             case Tavern_Drunk_Steal:
                 new Tavern_Drunk_Steal().interaction();
                 break;
+            case CrimeBoss:
+                new CrimeBoss().interaction();
+                break;
+            case CrimeBoss_Buy:
+                new CrimeBoss_Buy().interaction();
+                break;
+            case CrimeBoss_DonationReply:
+                new CrimeBoss_DonationReply().interaction();
+                break;
+
+
 
         }
     }
