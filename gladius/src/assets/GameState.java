@@ -17,5 +17,6 @@ public enum GameState {
     CrimeBoss,
     CrimeBoss_Buy,
     CrimeBoss_DonationReply,
+    Temple,
 
 }

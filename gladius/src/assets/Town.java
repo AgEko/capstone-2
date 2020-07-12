@@ -64,7 +64,8 @@ public class Town extends Scene{
                     WorldState.getInstance().game.setGameState(GameState.CrimeBoss);
                     break;
                 case 7:
-
+                    awaitInput("You head to the Temple of Talos.");
+                    WorldState.getInstance().game.setGameState(GameState.Temple);
                     break;
                 default:
                     System.out.println("That is not a valid option.");

@@ -88,6 +88,9 @@ public class Game {
             case CrimeBoss_DonationReply:
                 new CrimeBoss_DonationReply().interaction();
                 break;
+            case Temple:
+                new Temple().interaction();
+                break;
 
 
 

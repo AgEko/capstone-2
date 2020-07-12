@@ -29,6 +29,7 @@ public class WorldState {
     private boolean tookDonationBaker;
     private boolean tookDonationTanner;
     private boolean tookDonationShop;
+    private boolean tookDonationTemple;
 
 
     private int gold = 0;
@@ -367,5 +368,13 @@ public class WorldState {
 
     public void setAtCrimeBoss(boolean atCrimeBoss) {
         isAtCrimeBoss = atCrimeBoss;
+    }
+
+    public boolean isTookDonationTemple() {
+        return tookDonationTemple;
+    }
+
+    public void setTookDonationTemple(boolean tookDonationTemple) {
+        this.tookDonationTemple = tookDonationTemple;
     }
 }
