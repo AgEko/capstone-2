@@ -33,7 +33,7 @@ public class HomeMenu {
                 Scanner scanner = new Scanner(System.in);
                 choice = scanner.nextInt();
             } catch (InputMismatchException e) {
-                //Fill
+                System.out.println("That is not a valid option.");
             }
             switch (choice) {
                 case 0:

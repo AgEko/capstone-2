@@ -26,7 +26,6 @@ public abstract class Scene {
                     System.out.println("That is not a valid option.");
                     singleInput(a);
             }
-
         } catch (InputMismatchException e) {
             System.out.println("That is not a valid option.");
             singleInput(a);

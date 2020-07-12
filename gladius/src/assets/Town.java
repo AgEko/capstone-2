@@ -34,7 +34,7 @@ public class Town extends Scene{
                 Scanner a = new Scanner(System.in);
                 choice = a.nextInt();
             } catch (InputMismatchException e){
-                // Fill
+                System.out.println("That is not a valid option.");
             }
 
             switch (choice){
