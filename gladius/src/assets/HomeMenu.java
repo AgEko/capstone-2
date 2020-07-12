@@ -1,9 +1,12 @@
 package assets;
 
+import assets.items.Booze;
+import assets.items.DragonFlare;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class HomeMenu {
+public class HomeMenu extends Scene {
 
     public void homeMenu(){
         if (!WorldState.getInstance().isHasBeenToHomeMenu()){
@@ -50,6 +53,11 @@ public class HomeMenu {
                     break;
                 case 5:
                     //todo Reach player, display inventory array in for loop
+                    System.out.println(WorldState.getInstance().game.player.inventory.get(0).getName());
+
+                    System.out.println(objectExists(WorldState.getInstance().game.player.inventory, DragonFlare.class));
+                    System.out.println(objectExists(WorldState.getInstance().game.player.inventory, Booze.class));
+
                     break;
                 default:
                     System.out.println("That is not a valid option.");

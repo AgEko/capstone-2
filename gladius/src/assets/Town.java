@@ -57,6 +57,9 @@ public class Town extends Scene{
                     WorldState.getInstance().game.setGameState(GameState.Noble);
                     break;
                 case 5:
+                    awaitInput("You head to the Tavern");
+                    WorldState.getInstance().game.setGameState(GameState.Tavern);
+
                     break;
                 case 6:
                     break;

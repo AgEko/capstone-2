@@ -42,7 +42,7 @@
             > Leave
 
 
-      - Go to the Noble Lord of the assets.town
+      - Go to the Noble Lord of the town
             > Ask for a donation
                 = "Begone with you, thou beggar! I shall have the guard remove you at once!"
                 = The guards tromp into the room and don't so much as slow down as they scoop you out to toss you out of the front gates.

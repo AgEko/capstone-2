@@ -1,9 +1,6 @@
 package assets;
 
-import assets.town.Baker;
-import assets.town.Noble;
-import assets.town.Shop;
-import assets.town.Tanner;
+import assets.town.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -13,8 +10,11 @@ public class Game {
     public Player player;
     private final Scanner scanner = new Scanner(System.in);
 
+    public Game() {
+        this.player = new Player();
+    }
+
     public void startGame() {
-        player = new Player();
         System.out.println("Select an option");
         System.out.println("======");
         System.out.println("0 - Exit Game.");
@@ -41,9 +41,6 @@ public class Game {
 
     private void handleGameState(){
         switch (gameState) {
-            case Gameover:
-
-                break;
             case Adventure:
                 break;
             case GameIntro:
@@ -70,6 +67,10 @@ public class Game {
             case Noble:
                 new Noble().interaction();
                 break;
+            case Tavern:
+                //new Tavern().interaction();
+                break;
+
         }
     }
 

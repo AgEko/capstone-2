@@ -1,7 +1,6 @@
 package assets;
 
 public enum GameState {
-    Gameover,
     Adventure,
     GameIntro,
     QuestIntro,
@@ -10,5 +9,6 @@ public enum GameState {
     Baker,
     Shop,
     Tanner,
-    Noble
+    Noble,
+    Tavern
 }

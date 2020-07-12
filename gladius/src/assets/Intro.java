@@ -1,5 +1,7 @@
 package assets;
 
+import assets.items.DragonFlare;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -38,9 +40,11 @@ public class Intro extends Scene {
                 case 3:
                     awaitInput("\"Not my problem, you have three days.\"");
                     awaitInput("\"Use this signal when you have the gold.\"");
+                    WorldState.getInstance().game.player.inventory.add(new DragonFlare("DragonFlare"));
                     System.out.println("You receive a Dragon Flare.");
                     //Todo: add dragonFlare
-                    WorldState.getInstance().game.setGameState(GameState.HomeMenu);;
+
+                    WorldState.getInstance().game.setGameState(GameState.HomeMenu);
                     break;
                 default:
                     System.out.println("That is not a valid option.");

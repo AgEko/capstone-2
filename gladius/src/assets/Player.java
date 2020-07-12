@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-    List<Item> inventory = new ArrayList<Item>();
+    List<Item> inventory;
 
     public Player() {
-        this.inventory = inventory;
-
+        this.inventory = new ArrayList<Item>();
     }
 
 

@@ -1,14 +1,17 @@
 package assets;
 
+import assets.items.Item;
+
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class Scene {
 
     protected static void awaitInput(String a) {
         System.out.println(a);
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.nextLine();
     }
 
     protected static void singleInput(String a) {
@@ -40,6 +43,14 @@ public abstract class Scene {
         WorldState.getInstance().game.setGameState(GameState.GameIntro);
     }
 
+    protected static boolean objectExists(List<Item> objectList, Class classType){
+        for (Object object : objectList){
+            if (object.getClass() == classType){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 
