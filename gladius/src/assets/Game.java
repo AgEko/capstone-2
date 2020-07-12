@@ -1,6 +1,7 @@
 package assets;
 
 import assets.scenes.*;
+import assets.scenes.Dungeon.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -90,6 +91,31 @@ public class Game {
                 break;
             case Temple:
                 new Temple().interaction();
+                break;
+
+            case Dungeon:
+                new Dungeon().interaction();
+                break;
+            case Dungeon_Visited:
+                new Dungeon_Visited().interaction();
+                break;
+            case Dungeon_Entrance:
+                new Dungeon_Entrance().interaction();
+                break;
+            case Dungeon_Lich:
+                new Dungeon_Lich().interaction();
+                break;
+            case Dungeon_Apology:
+                new Dungeon_Apology();
+                break;
+            case Dungeon_KeepStabbing:
+                new Dungeon_KeepStabbing();
+                break;
+            case Dungeon_BoneregardChat:
+                new Dungeon_BoneregardChat();
+                break;
+            case Dungeon_BoneregardInsult:
+                new Dungeon_BoneregardInsult();
                 break;
 
 

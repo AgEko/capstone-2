@@ -8,7 +8,7 @@
         (!visited)
         You walk inside and are met by a shambling figure. "Welcome to the Blarrg encampment traveler. I am Mr. Boneregard servant of Lich Thel'zan."
         You see the face of the figure and its a skeleton!
-        > "Die undead beast!" Strike the skeleton with your weapon!
+        > "Die undead beast!" Strike the skeleton with your sword!
             (sword)
             + SkeleStab 1
             = You ram your sword between the ribs to the skeleton. It appears at a loss for words. "Oh come off it. You can't hurt me with that." He takes your sword out of him and hands it back to you. "Did you come here for a reason?"
@@ -25,16 +25,14 @@
                 > No, way Jose I don't negotiate with the undead.
                     = attackSkeleton(weapon)
         > "You can talk?!"
-            = Yes we all can, we're just stripped of our mortal coil and a few bad eggs gave the rest of us lot a bad reputation with humans.
-            =We're not so bad once you get past the whole undead thing.
-            =Come now, I shall take you to our Lich. He would have a word with you.
-        >" Eee! Y-y-you can t-talk!" Run out of the dungeon.
-            Leave Dungeon.
+            = "Yes we all can, we're just stripped of our mortal coil and a few bad eggs gave the rest of us lot a bad reputation with humans."
+            ="We're not so bad once you get past the whole undead thing."
+            ="Come now, I shall take you to our Lich. He would have a word with you."
         > "Oh hey haven't talked to a skeleton before, you're not the eat-the-flesh-of-the-living type are you?"
             = The skeleton laughs " No no, since losing our flesh we haven't succumbed to the Black Rage like most skeletons do, it's all thanks to us being led by our Lich."
             >"What does your Lich want?"
                 ="We are interested in technological advancement and seeking away back into the land of the living. Not trying to stay dead forever you know."
-            >"Can you offer any help for my assets.scenes?" Explain the plight of your village.
+            >"Can you offer any help for my town?" Explain the plight of your village.
                 = "Interesting, I don't know if im the bone to say, but perhaps our Lich might have a solution for you. I'll take you to him."
                 gotoLich()
             >"Nah I bet you are, suck eggs bonehead."
@@ -42,7 +40,7 @@
                     >"Do what?"
                         =Skeletons surround you and rip you to pieces. GAMEOVER
             >"Oh hey I gotta go, I just remembered I have to vacuum my carpet."
-                =The skeleton chuckles "Heh, everyone knows vacuums aren't real, come I'll introduce you to our Lich, he could use your help.."
+                =The skeleton chuckles "Heh, everyone knows vacuums aren't real, come I'll introduce you to our Lich, he has use of you."
                 gotoLich()
             >"Yikes, did not expect to talk to a skeleton today, i gotta go."
                 = The skeleton replies in an upbeat tone "Okay! We are a curiosity most assuredly, just know we are not here to hurt anyone. Any time you would like to come back: we'll be here."
@@ -105,7 +103,7 @@
                             > "How do I kill you skeletons?"
                                 The Lich gives a hollow, slow response, "Fire... dragon fire... will seal our fate..."
                             > "Are there any useful trinkets here?"
-                                "None... all used... only gold is here..."
+                                "None... all used... only gold..."
                                     >"Well hork it over bozo!"
                                     = You gather what you can carry
                                         +500 G

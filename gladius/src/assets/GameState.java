@@ -5,6 +5,7 @@ public enum GameState {
     GameIntro,
     QuestIntro,
     HomeMenu,
+
     TownMenu,
     Baker,
     Shop,
@@ -18,5 +19,14 @@ public enum GameState {
     CrimeBoss_Buy,
     CrimeBoss_DonationReply,
     Temple,
+
+    Dungeon,
+    Dungeon_Entrance,
+    Dungeon_Visited,
+    Dungeon_Lich,
+    Dungeon_Apology,
+    Dungeon_KeepStabbing,
+    Dungeon_BoneregardChat,
+    Dungeon_BoneregardInsult,
 
 }

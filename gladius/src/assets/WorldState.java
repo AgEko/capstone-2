@@ -38,6 +38,7 @@ public class WorldState {
     private boolean oweTheMob;
     private boolean isTalosMad;
 
+    private boolean metBoneregard;
     private boolean stoleFromLich;
     private boolean isOnLichQuest;
     private boolean lichQuestSuccess;
@@ -376,5 +377,13 @@ public class WorldState {
 
     public void setTookDonationTemple(boolean tookDonationTemple) {
         this.tookDonationTemple = tookDonationTemple;
+    }
+
+    public boolean isMetBoneregard() {
+        return metBoneregard;
+    }
+
+    public void setMetBoneregard(boolean metBoneregard) {
+        this.metBoneregard = metBoneregard;
     }
 }

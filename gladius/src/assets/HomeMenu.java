@@ -40,7 +40,7 @@ public class HomeMenu extends Scene {
                     WorldState.getInstance().game.setGameState(GameState.TownMenu);
                     break;
                 case 2:
-                    //todo goto dungeon(S?)
+                    WorldState.getInstance().game.setGameState(GameState.Dungeon);
                     break;
                 case 3:
                     //todo Dragon Event class
