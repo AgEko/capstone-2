@@ -1,11 +1,13 @@
-package assets;
+package assets.scenes.Town;
 
-import assets.scenes.Town.Shop;
+import assets.GameState;
+import assets.Scene;
+import assets.WorldState;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Town extends Scene{
+public class Town extends Scene {
 
 
     public void townMenu(){

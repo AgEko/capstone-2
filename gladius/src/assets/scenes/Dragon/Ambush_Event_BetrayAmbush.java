@@ -52,6 +52,9 @@ public class Ambush_Event_BetrayAmbush extends Scene {
                 if (WorldState.getInstance().getGold() > 805){
                     awaitInput("You give the dragon 805 gold and she departs. The town is preserved for now.");
                     WorldState.getInstance().game.setGameState(GameState.Epilogue);
+                    if(WorldState.getInstance().isTalosMad()){
+                        talosInfluenceOnDragon();
+                    }
                 }
                 singleInput("You protest her outrage's demand\"What?! I don't have that kind of money!\" ");
                 awaitInput("Then I shall rend it from your very bones!");
@@ -61,6 +64,15 @@ public class Ambush_Event_BetrayAmbush extends Scene {
                 System.out.println("That is not a valid option.");
                 WorldState.getInstance().game.setGameState(GameState.Ambush_Event_BetrayAmbush);
         }
-
     }
+
+    private void talosInfluenceOnDragon(){
+        awaitInput("Your mind is flooded with whispers from the evil deity Talos. \"\"");
+        awaitInput("\"He lies to you Lira... Do not show weakness to this, lesser race. You, are a dragon. To rule is your right.\"");
+        singleInput("You clan out an ear, \"Uh, did you hear that?\"");
+        awaitInput("Your question is quickly answered as the Dragon's murderous aura overwhelms you");
+        awaitInput("The beast rends you with such ferocity that... then she... Oh the humanity! Tis' is far too gruesome to describe.");
+        gameOver("But yep... You are dead indeed. No question about that. Guess stealing from the Temple wasn't worth it. Oof!");
+    }
+
 }

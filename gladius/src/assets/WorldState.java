@@ -6,6 +6,7 @@ public class WorldState {
 
     private boolean gameOver;
 
+    private boolean introMessage;
     private boolean hasBeenToHomeMenu;
 
 
@@ -403,5 +404,13 @@ public class WorldState {
 
     public void setAmbushBetrayal(boolean ambushBetrayal) {
         this.ambushBetrayal = ambushBetrayal;
+    }
+
+    public boolean isIntroMessage() {
+        return introMessage;
+    }
+
+    public void setIntroMessage(boolean introMessage) {
+        this.introMessage = introMessage;
     }
 }

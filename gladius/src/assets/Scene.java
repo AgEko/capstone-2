@@ -10,8 +10,9 @@ public abstract class Scene {
 
     protected static void awaitInput(String a) {
         System.out.println(a);
-//        Scanner scanner = new Scanner(System.in);
-//        scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("<>");
+        scanner.nextLine();
     }
 
     protected static void singleInput(String a) {

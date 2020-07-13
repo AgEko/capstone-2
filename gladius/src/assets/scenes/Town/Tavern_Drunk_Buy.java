@@ -33,13 +33,14 @@ public class Tavern_Drunk_Buy extends Scene {
                     WorldState.getInstance().game.player.getInventory().add(new Booze("Devil Water"));
                     WorldState.getInstance().subtractGold(35);
                 } else {
+                    awaitInput("You don't have enough gold." + " Your gold: " + WorldState.getInstance().getGold() + ".");
                     awaitInput("You tell the drunk you don't ave enough gold. He stares blankly at you for a moment and stands up.");
                     awaitInput("The drunk then hadoukens a fart at you, forcing you to retreat with tears in your eyes.");
                 }
                 WorldState.getInstance().game.setGameState(GameState.Tavern);
                 break;
             case 2:
-                awaitInput("\"NO YOU GET BENT! After a few minutes of this the Barkeep slaps you both upside the head. \"Knock it off\" he growls.\"");
+                awaitInput("\"NO! YOU GET BENT! After a few minutes of this the Barkeep slaps you both upside the head. \"Knock it off\" he growls.\"");
                 WorldState.getInstance().game.setGameState(GameState.Tavern);
                 break;
             default:

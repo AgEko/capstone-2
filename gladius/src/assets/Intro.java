@@ -9,14 +9,19 @@ public class Intro extends Scene {
 
     public void introToQuest(){
         int choice = -1;
+        boolean quit = false;
 
-        awaitInput("You're the resident adventurer the small town of Kleinstadt.");
-        awaitInput("Awaken to an explosion, as you run out side there's a massive dragon!");
-        awaitInput("Dragon roars \"Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth.\"");
-        awaitInput("\"Any questions?\"");
+        if (!WorldState.getInstance().isIntroMessage()){
+            awaitInput("You're the resident adventurer the small town of Kleinstadt.");
+            awaitInput("Awaken to an explosion, as you run out side there's a massive dragon!");
+            awaitInput("Dragon roars \"Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth.\"");
+            awaitInput("\"Any questions?\"");
+            WorldState.getInstance().setIntroMessage(true);
+        }
 
+        while(!quit){
 
-            System.out.println("1 - \"Hey Dragon, Up yours!\"");
+            System.out.println("1 - \"Hey Dragon, get stuffed!!\"");
             System.out.println("2 - \"How much gold do you demand Dragon?\"");
             System.out.println("3 - \"Where can I find gold?\"");
             try {
@@ -35,6 +40,7 @@ public class Intro extends Scene {
                 case 2:
                     awaitInput("\"Bring me 500 gold. \"");
                     singleInput("\"Aight.\"");
+
                     break;
                 case 3:
                     awaitInput("\"Not my problem, you have three days.\"");
@@ -47,6 +53,8 @@ public class Intro extends Scene {
                     System.out.println("That is not a valid option.");
                     WorldState.getInstance().game.setGameState(GameState.QuestIntro);
             }
+        }
+
     }
 
 }

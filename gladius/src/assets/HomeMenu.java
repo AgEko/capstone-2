@@ -34,8 +34,6 @@ public class HomeMenu extends Scene {
                 WorldState.getInstance().game.setGameState(GameState.HomeMenu);
             }
             switch (choice) {
-                case 0:
-                    break;
                 case 1:
                     WorldState.getInstance().game.setGameState(GameState.TownMenu);
                     break;

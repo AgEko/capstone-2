@@ -71,7 +71,7 @@ public class Shop extends Scene{
                         awaitInput("You buy a Warhammer for 50 gold. Oof! It's heavy!");
                         WorldState.getInstance().subtractGold(50);
                     } else {
-                        awaitInput("You don't have enough gold.");
+                        awaitInput("You don't have enough gold." + " Your gold: " + WorldState.getInstance().getGold() + ".");
                     }
                     WorldState.getInstance().game.setGameState(GameState.Shop);
                     break;
@@ -81,7 +81,7 @@ public class Shop extends Scene{
                         awaitInput("You buy a Torch for 15 gold. This is sure to light any dark passageways!");
                         WorldState.getInstance().subtractGold(15);
                     } else {
-                        awaitInput("You don't have enough gold.");
+                        awaitInput("You don't have enough gold." + " Your gold: " + WorldState.getInstance().getGold() + ".");
                     }
                     WorldState.getInstance().game.setGameState(GameState.Shop);
                     break;
