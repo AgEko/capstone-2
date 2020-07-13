@@ -8,8 +8,8 @@ You fire the dragon flare into the sky. After a few minutes the dragon crashes i
             "My name is Lirastrasza, mortal."
             > "Thank you for your kind mercy Lirastrasza, here is your gold." ENDGAME
             > "You're kinda cute, How about we go a drink?"
-                    =The dragon is clearly caught off guard by your proposal. She accepts.
-                    ="Noice. Meet me at the tavern this evening."
+                    =The dragon blushes a deep red clearly caught off guard by your proposal. She accepts.
+                    = Noice.jpg "Meet me at the tavern this evening."
                     =Lirastrasza takes flight with a small hop in her step.
                     dragonPreDate()
             > ""
@@ -17,9 +17,9 @@ You fire the dragon flare into the sky. After a few minutes the dragon crashes i
             = You attack the dragon with weapon
             = Unable to reach the soft underbelly of the dragon your weapon glances off the scales of the beast.
             = The dragon gobbles you up "Mmm, crunchy" the dragon says as your bones are crushed and you are eaten alive.GAMEOVER
-        >You notice the dragon is about eight stories tall and is a crustacean from the pedadoic era.
-            ="DAMN IT MONSTER GET OFF MY LAWN!"
-            = I Ain't giving you no tree fiddy!
+        =It's about then you notice the dragon is about eight stories tall and is a crustacean from the pedadoic era.
+            >"DAMN IT MONSTER GET OFF MY LAWN!"
+            = "I Ain't giving you no tree fiddy!"
             =The dragon responds "Well how about two fiddy?"
             >"Oh now it's only two fiddy?! What is it in for lock-ness munchies or somethin?"
             = Although correct that this was for the Dragon's severe case of the munchies, you could not have had worse timing. The Dragon makes you it's snack. Bon appetit! GAMEOVER

@@ -1,6 +1,6 @@
 package assets;
 
-import assets.scenes.Shop;
+import assets.scenes.Town.Shop;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

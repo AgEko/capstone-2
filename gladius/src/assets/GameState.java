@@ -5,6 +5,7 @@ public enum GameState {
     GameIntro,
     QuestIntro,
     HomeMenu,
+    Epilogue,
 
     TownMenu,
     Baker,
@@ -35,4 +36,11 @@ public enum GameState {
     Dungeon_Visited_StoleGold,
     Dungeon_Visited_StoleGold_Attack,
 
+    Dragon_Event,
+    Dragon_KindaCute,
+    Dragon_Date,
+    Dragon_Date_Pre,
+    Dragon_Date_AttackOnDragon,
+    Ambush_Event,
+    Ambush_Event_BetrayAmbush,
 }

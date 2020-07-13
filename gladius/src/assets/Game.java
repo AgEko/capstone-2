@@ -1,7 +1,9 @@
 package assets;
 
-import assets.scenes.*;
+import assets.scenes.Dragon.*;
 import assets.scenes.Dungeon.*;
+import assets.scenes.Epilogue;
+import assets.scenes.Town.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -16,10 +18,12 @@ public class Game {
     }
 
     public void startGame() {
-        System.out.println("Select an option");
-        System.out.println("======");
-        System.out.println("0 - Exit Game.");
-        System.out.println("1 - Start Game.");
+        System.out.println("=====================");
+        System.out.println("===     Dragon's Due     ===");
+        System.out.println("=====================");
+        System.out.println("===     0 - Exit Game    ===");
+        System.out.println("===     1 - Start Game   ===");
+        System.out.println("=====================");
         int choice = -1;
 
         try {
@@ -32,7 +36,7 @@ public class Game {
             case 0:
                 break;
             case 1:
-                
+
                 setGameState(GameState.QuestIntro);
                 break;
             default:
@@ -57,6 +61,9 @@ public class Game {
             case TownMenu:
                 new Town().townMenu();
                 break;
+            case Epilogue:
+                new Epilogue().interaction();
+
             case Baker:
                 new Baker().interaction();
                 break;
@@ -136,10 +143,26 @@ public class Game {
             case Dungeon_Visited_StoleGold_Attack:
                 new Dungeon_Visited_StoleGold_Attack().interaction();
                 break;
-
-
-
-
+            case Dragon_Event:
+                new Dragon_Event().interaction();
+                break;
+            case Dragon_KindaCute:
+                new Dragon_KindaCute().interaction();
+                break;
+            case Dragon_Date:
+                new Dragon_Date().interaction();
+                break;
+            case Dragon_Date_Pre:
+                new Dragon_Date_Pre().interaction();
+                break;
+            case Dragon_Date_AttackOnDragon:
+                new Dragon_Date_AttackOnDragon();
+                break;
+            case Ambush_Event:
+                new Ambush_Event().interaction();
+                break;
+            case Ambush_Event_BetrayAmbush:
+                new Ambush_Event_BetrayAmbush().interaction();
         }
     }
 

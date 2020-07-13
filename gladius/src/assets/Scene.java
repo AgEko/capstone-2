@@ -14,7 +14,6 @@ public abstract class Scene {
 //        scanner.nextLine();
     }
 
-    //Todo GET OFF MY LAWN MONSTER
     protected static void singleInput(String a) {
         System.out.println("1 - " + a);
 
@@ -41,9 +40,8 @@ public abstract class Scene {
 
         System.out.println("As you die you never learn the fate of what happens to your town. Don't do that thing you did that get dead next time.");
         WorldState.getInstance().setGameOver(true);
-//        WorldState.reset();
-        WorldState.getInstance().game.setGameState(GameState.GameIntro);
-
+        System.exit(0);
+        //WorldState.getInstance().game.setGameState(GameState.GameIntro);
     }
 
     protected static boolean objectExists(List<Item> objectList, Class classType){
@@ -54,53 +52,5 @@ public abstract class Scene {
         }
         return false;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//            try {
-//        Scanner a = new Scanner(System.in);
-//        int choice = a.nextInt();
-//
-//        switch (choice){
-//            case 1:
-//                break;
-//            case 2:
-//                break;
-//            case 3:
-//                break;
-//            case 4:
-//                break;
-//            case 5:
-//                break;
-//            case 6:
-//                break;
-//            case 7:
-//                break;
-//            case 8:
-//                break;
-//            default:
-//        }
-//
-//    } catch (InputMismatchException e){
-//        System.out.println("That is not a valid option.");
-//        townMenu();
-//    }
-
 
 }

@@ -1,6 +1,7 @@
 A sudden crash snaps your attention to the windows of the tavern as they collapse inward one by one.
 The ambush that you have set up with the villagers has begun!
     = Lirastrasza looks to the nearest window and prepares to let loose a fireball!
+
     (drunkDragon)
         = Getting the dragon drunk appears to have enhanced her fireball!
         = The entire wall of the building is blown out, incinerating many of the ambushers.
@@ -8,6 +9,7 @@ The ambush that you have set up with the villagers has begun!
         = Having dealt with the ambushers Lirastrasza turns her attention to you and begins to channel a massive fireball.
             > "It's just a prank bro!"
                 = She incinerates you on the spot with incredible fury. There is only a small oily stain left where you once were. GAMEOVER
+
     (!DrunkDragon)
         = Lirastrasza is distracted by the attackers! Here is your chance!
             > Take your sword and drive it into her underbelly
@@ -20,8 +22,9 @@ The ambush that you have set up with the villagers has begun!
                 (!soloDragonKill)
                 (deadDragon)
                 ENDGAME
+
             > Fight the ambushers
-                = you decide that Lirastrasza isn't to bad and decide to take arms against the ambushers.
+                = you decide that Lirastrasza isn't so bad and decide to take arms against the ambushers.
                 = Dodging flame blasts and striking down the ambushers you and the Dragon defeat the ambush!
                 = As the smoke clears Lirastrasza eyes you suspiciously. She demands: "What is the meaning of this?"
                     > I apologize for their actions Lirastrasza. They were only to intervene if I was in trouble."
@@ -29,33 +32,34 @@ The ambush that you have set up with the villagers has begun!
                         = "Humans cannot be trusted."
                         = She leaps upon you and tears you in half with her powerful claws. GAMEOVER
                     > I pleaded with them not to attack, they would not listen.
-                        = "Humans will never accept a dragon amongst them. Give me the gold I request and I will go."
+                        = "Humans will always kill a dragon amongst for glory or out of fear. Give me the gold I request and I will go."
                         dragonPayoff()
                     > I had no idea, Lirastrasza.
                         = "A likely story mortal."
-                        = "Give me twice what I demand and i may spare your assets.scenes"
+                        = "Give me twice what I demand and i may spare your town."
                         dragonPayoff(x2!){
                             if
                             (talosMad){
                                 = Your mind is flooded with whispers from the evil deity Talos.
-                                = "He lies to you Lira... Do not show weakness to this lesser race. You are a dragon. You deserve to rule over these weaklings."
+                                = "He lies to you Lira... Do not show weakness to this lesser race. You are a dragon. To rule is your right."
                                     > "Uh, did you happen to hear that?"
-                                        = Your question is quickly answered as you feel the Dragon's murderous aura overwhelm you.
-                                        = The beast rends you with such ferocity that... then she... Oh the humanity! It is far too gruesome to describe.
+                                        = Your question is quickly answered as the Dragon's murderous aura overwhelms you.
+                                        = The beast rends you with such ferocity that... then she... Oh the humanity! Tis' is far too gruesome to describe.
                                         = But yep... You are dead indeed. No question about that. GAMEOVER
                             }
                         }
                     > "Its just a prank?"
                         = The dragon pranks you by lighting you on fire, before eating you as a crunchy snack. GAMEOVER
+
             > Kick back and watch the show
                 (drunkDragon) ambushEvent()
                     // she wins the fight just like before
                 (!drunkDragon)
                     =The numerous ambushers attack from all sides and overwhelm the dragon by sheer numbers taking full advantage of the confined space of the tavern.
-                    = The dragon is slain. The assets.scenes is saved from her fire.
+                    = The dragon is slain. Kleinstadt is saved from her fire.
                     = The ambushers look to you sitting back and just watching.
                     = "What the hell man? You just sat back? Some of us died!"
-                        >"Yeah, but I didn't. Also the assets.scenes is saved. You're welcome."
+                        >"Yeah, but I didn't. Also the town is saved. You're welcome."
                             ="You're a jackass, come on gang. Drinks on me."
                             (lazyDragonKill)
                             - karma 2

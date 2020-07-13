@@ -43,7 +43,7 @@ public class HomeMenu extends Scene {
                     WorldState.getInstance().game.setGameState(GameState.Dungeon);
                     break;
                 case 3:
-                    //todo Dragon Event class
+                    WorldState.getInstance().game.setGameState(GameState.Dragon_Event);
                     break;
                 case 4:
                     awaitInput("You have " + WorldState.getInstance().getGold() + " gold.");

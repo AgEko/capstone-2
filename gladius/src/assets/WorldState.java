@@ -8,7 +8,6 @@ public class WorldState {
 
     private boolean hasBeenToHomeMenu;
 
-    private boolean hasBlackjack; //todo its an item now, FIX I SAY!!! NI!
 
     private boolean stoleFromBaker;
     private boolean stoleFromShop;
@@ -47,6 +46,7 @@ public class WorldState {
     private boolean visitedCrypt;
 
     private boolean ambush;
+    private boolean ambushBetrayal;
     private boolean drunkDragon;
     private boolean dragonGF;
     private boolean deadDragon;
@@ -357,14 +357,6 @@ public class WorldState {
         this.lazyDragonKill = lazyDragonKill;
     }
 
-    public boolean isHasBlackjack() {
-        return hasBlackjack;
-    }
-
-    public void setHasBlackjack(boolean hasBlackjack) {
-        this.hasBlackjack = hasBlackjack;
-    }
-
     public boolean isAtCrimeBoss() {
         return isAtCrimeBoss;
     }
@@ -403,5 +395,13 @@ public class WorldState {
 
     public void setLichQuestComplete(boolean lichQuestComplete) {
         this.lichQuestComplete = lichQuestComplete;
+    }
+
+    public boolean isAmbushBetrayal() {
+        return ambushBetrayal;
+    }
+
+    public void setAmbushBetrayal(boolean ambushBetrayal) {
+        this.ambushBetrayal = ambushBetrayal;
     }
 }
