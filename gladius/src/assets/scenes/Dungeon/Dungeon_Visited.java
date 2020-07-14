@@ -23,7 +23,7 @@ public class Dungeon_Visited extends Scene {
         if (!WorldState.getInstance().isLichQuestComplete()){
             if(!WorldState.getInstance().isLichQuestSuccess()){
                 singleInput("Not just yet.");
-                awaitInput("\"Very well, please return when you succeed establishing trade for us.\"");
+                awaitInput("\"Very well, please return when you succeed in establishing trade for us.\"");
                 WorldState.getInstance().game.setGameState(GameState.Dungeon);
             } else {
                 singleInput(" You inform Mr. Bonereguard with the details of the arrangement that the shopkeep proposed.");

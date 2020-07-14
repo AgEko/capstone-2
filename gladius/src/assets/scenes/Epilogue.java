@@ -56,12 +56,10 @@ public class Epilogue extends Scene {
             } else {
                 awaitInput(" The people of Kleinstadt don't find you to be a very honorable guy and decide to hand you over to the Lich'es minions.");
                 if(WorldState.getInstance().isDragonGF()){
-                    awaitInput("You tell Lirastrasza about the Lich'es demands and she snorts her disapproval at the attempt on your life." +
-                            "Lirastrasza takes flight and launches a fireball at the skeletons who scatter, many perishing in the dragon's flame, the others screeching as they retreat." +
-                            "You give Lirastrasza a peck on the cheek, \"Thanks Boo.\"." +
-                            "" +
-                            "Having been betrayed by the townsfolk fold you decide to live as a roving bandito with Lirastrasza stealing gold and amassing the biggest dragon horde of all time." +
-                            "Your skills in espionage in human settlements make finding lucrative marks easy. You and Lirastrasza go down as the most infamous duo in history.");
+                    awaitInput("You tell Lirastrasza about the Lich'es demands and she snorts her disapproval at the attempt on your life.");
+                    singleInput("You give Lirastrasza a peck on the cheek, \"Thanks Boo.\".");
+                    awaitInput("\"Having been betrayed by the townsfolk fold you decide to live as a roving bandito with Lirastrasza stealing gold and amassing the biggest dragon horde of all time.\"");
+                    awaitInput("Your skills in espionage in human settlements make finding lucrative marks easy. You and Lirastrasza go down as the most infamous duo in history.");
                 } else {
                     awaitInput("The townsfolk hand you over the Mr. Boneregard. Who drags you back to the Crypt." +
                             "Thel'zan sucks your soul out and make you into a haunting geist. You are unable to interact or speak with the carnal plane.." +
@@ -83,6 +81,7 @@ public class Epilogue extends Scene {
         if(WorldState.getInstance().isStoleFromLich() && WorldState.getInstance().getKarma() > 3 && !WorldState.getInstance().isDragonGF()){
             System.out.println("Sucks you died anyway, Don't be a jerk next time!");
         }
+        System.exit(0);
     }
 }
 

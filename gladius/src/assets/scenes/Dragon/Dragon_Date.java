@@ -75,10 +75,15 @@ public class Dragon_Date extends Scene {
     private void goldCheck(){
         awaitInput("Turns out dragons are golddiggers. Who woulda guessed? Gold check! Do you have enough gold to impress Lirastrasza?");
         if (WorldState.getInstance().getGold() > 1000 || (WorldState.getInstance().isDrunkDragon() && WorldState.getInstance().getGold() > 750)){
+            awaitInput("Aw yiss! You got the gold, she is so into you!");
             awaitInput("One more pick up line and you seal the deal.");
             singleInput("\"I put on my robe and wizard hat...\"");
             awaitInput("You and Lirastrasza are now going steady. Dragon Girlfriend. You rapscallion you.");
             WorldState.getInstance().setDragonGF(true);
+            if(WorldState.getInstance().isAmbush()){
+                WorldState.getInstance().game.setGameState(GameState.Ambush_Event);
+            }
+            WorldState.getInstance().game.setGameState(GameState.Epilogue);
         } else {
             awaitInput("Too bad, no Dragon GF, but Lirastrasza has a good time on the date and decides to spare the town free of charge.");
             if(WorldState.getInstance().isAmbush()){

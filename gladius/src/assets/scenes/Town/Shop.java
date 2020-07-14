@@ -4,6 +4,7 @@ import assets.GameState;
 import assets.Scene;
 import assets.WorldState;
 import assets.items.Hammer;
+import assets.items.Torch;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -77,7 +78,7 @@ public class Shop extends Scene{
                     break;
                 case 4:
                     if (WorldState.getInstance().getGold() > 15){
-                        WorldState.getInstance().game.player.getInventory().add(new Hammer("Torch"));
+                        WorldState.getInstance().game.player.getInventory().add(new Torch("Torch"));
                         awaitInput("You buy a Torch for 15 gold. This is sure to light any dark passageways!");
                         WorldState.getInstance().subtractGold(15);
                     } else {

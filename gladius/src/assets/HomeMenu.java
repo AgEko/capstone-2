@@ -22,10 +22,10 @@ public class HomeMenu extends Scene {
        int choice = -1;
 
             System.out.println("1 - Try to fundraise from townsfolk of Kleinstadt for the gold." +
-                    "\n 2 - You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot." +
-                    "\n 3 - Summon the dragon with the dragon flare." +
-                    "\n 4 - Check your current gold." +
-                    "\n 5 - Check your collected items.");
+                    "\n2 - You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot." +
+                    "\n3 - Summon the dragon with the dragon flare." +
+                    "\n4 - Check your current gold." +
+                    "\n5 - Check your collected items.");
             try {
                 Scanner scanner = new Scanner(System.in);
                 choice = scanner.nextInt();

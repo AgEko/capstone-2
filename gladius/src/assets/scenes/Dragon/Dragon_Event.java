@@ -11,10 +11,17 @@ public class Dragon_Event extends Scene {
 
     public void interaction(){
         int choice = -1;
-        awaitInput("You fire the DragonFlare into the sky. After a few minutes the dragon crashes into the earth before you. You struggle to maintain your balance as the ground heaves around you.");
-        awaitInput("\"Do you have my gold?\" demands the Dragon.");
-        singleInput("\"Aye, I have the gold. Tell me your demand once more to be sure dragon.\"");
-        awaitInput("\"I'm going to need about 350.\"");
+
+        if(!WorldState.getInstance().isAtDragonEvent()){
+            awaitInput("You fire the DragonFlare into the sky. After a few minutes the dragon crashes into the earth before you. You struggle to maintain your balance as the ground heaves around you.");
+            awaitInput("\"Do you have my gold?\" demands the Dragon.");
+            singleInput("\"Aye, I have the gold. Tell me your demand once more to be sure dragon.\"");
+            awaitInput("\"I'm going to need about 350.\"");
+            WorldState.getInstance().setAtDragonEvent(true);
+        }
+
+
+
         System.out.println("0 - Return home." +
                 "\n1 - \"Here's your gold begone monster.\"" +
                 "\n2 - \"Hey dragon! Whats your name?\"" +
@@ -30,6 +37,7 @@ public class Dragon_Event extends Scene {
         switch (choice){
             case 0:
                 awaitInput("\"Uh, nevermind!\" You hurry off and return home");
+                WorldState.getInstance().setAtDragonEvent(false);
                 WorldState.getInstance().game.setGameState(GameState.HomeMenu);
                 break;
             case 1:

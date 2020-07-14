@@ -3,12 +3,10 @@ package assets;
 public class WorldState {
     private static WorldState instance;
 
-
     private boolean gameOver;
 
     private boolean introMessage;
     private boolean hasBeenToHomeMenu;
-
 
     private boolean stoleFromBaker;
     private boolean stoleFromShop;
@@ -31,7 +29,6 @@ public class WorldState {
     private boolean tookDonationShop;
     private boolean tookDonationTemple;
 
-
     private int gold = 0;
     private int karma = 0;
     private boolean knowShopLovesKhanway;
@@ -46,6 +43,7 @@ public class WorldState {
     private boolean lichQuestComplete;
     private boolean visitedCrypt;
 
+    private boolean atDragonEvent;
     private boolean ambush;
     private boolean ambushBetrayal;
     private boolean drunkDragon;
@@ -66,25 +64,6 @@ public class WorldState {
 
     public static void reset(){
         instance = new WorldState();
-    }
-
-    public static void isSessionTerminated(boolean quit){
-        for (int i = 0; i < 10; i++){
-            try {
-                quit = true;
-            } catch (Exception e){
-                System.out.println("No more backing up!");
-            }
-        }
-
-//        if (quit && WorldState.getInstance().isGameOver()){
-//            return true;
-//        }
-//        return false;
-    }
-
-    public static void setInstance(WorldState instance) {
-        WorldState.instance = instance;
     }
 
     public boolean isGameOver() {
@@ -412,5 +391,13 @@ public class WorldState {
 
     public void setIntroMessage(boolean introMessage) {
         this.introMessage = introMessage;
+    }
+
+    public boolean isAtDragonEvent() {
+        return atDragonEvent;
+    }
+
+    public void setAtDragonEvent(boolean atDragonEvent) {
+        this.atDragonEvent = atDragonEvent;
     }
 }

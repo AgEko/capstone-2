@@ -1,0 +1,30 @@
+* Is combat in overworld? or a new menu?
+* Gameboard [map.location(s)]
+[] Id for graphics
+[] Bool for (Solid)
+* Character
+[ ] Controller
+[ ] Inventory
+[ ] Use cases for utility spells
+*
+Interactions with dynamic and Solid objects
+    position (x, y)
+    velocity (x, y)
+    Solid v Solid
+    Solid v Dynamic
+    =
+    OnInteractions
+    isFriendly?
+*
+Inheritance structure
+[]Map
+    < Tiles
+
+[]Dynamic(Super Class)
+    < Creature
+        << Player ()
+        << NPC
+            <<< Mob
+    < Interaction
+        << Teleport(Move location)
+        << Signpost/Hidden spot (Display some info)

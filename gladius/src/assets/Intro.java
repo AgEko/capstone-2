@@ -12,8 +12,8 @@ public class Intro extends Scene {
         boolean quit = false;
 
         if (!WorldState.getInstance().isIntroMessage()){
-            awaitInput("You're the resident adventurer the small town of Kleinstadt.");
-            awaitInput("Awaken to an explosion, as you run out side there's a massive dragon!");
+            awaitInput("You are the resident adventurer the small town of Kleinstadt.");
+            awaitInput("You awaken to an explosion, as you run outside there's a massive dragon!");
             awaitInput("Dragon roars \"Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth.\"");
             awaitInput("\"Any questions?\"");
             WorldState.getInstance().setIntroMessage(true);

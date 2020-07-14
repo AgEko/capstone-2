@@ -11,11 +11,15 @@ public class Ambush_Event_BetrayAmbush extends Scene {
 
     public void interaction(){
         int choice = -1;
-        awaitInput("You decide that Lirastrasza isn't so bad and decide to take arms against the ambushers.");
-        awaitInput("Dodging flame blasts and striking down the ambushers you and the Dragon defeat the ambush!");
-        awaitInput("As the smoke clears Lirastrasza eyes you suspiciously. She demands: \"What is the meaning of this?\"");
-        WorldState.getInstance().subtractKarma(5);
-        WorldState.getInstance().setAmbushBetrayal(true);
+
+        if(!WorldState.getInstance().isAmbushBetrayal()){
+            awaitInput("You decide that Lirastrasza isn't so bad and decide to take arms against the ambushers.");
+            awaitInput("Dodging flame blasts and striking down the ambushers you and the Dragon defeat the ambush!");
+            awaitInput("As the smoke clears Lirastrasza eyes you suspiciously. She demands: \"What is the meaning of this?\"");
+            WorldState.getInstance().subtractKarma(5);
+            WorldState.getInstance().setAmbushBetrayal(true);
+        }
+
 
         System.out.println("1 - Explain about your part in the ambush and apologize." +
                 "\n2 - Lie to her: You asked them not to attack." +

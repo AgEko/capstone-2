@@ -13,7 +13,7 @@ public class Noble extends Scene {
     public void interaction(){
         int choice = -1;
         if (!WorldState.getInstance().isAtNoble()) {
-            awaitInput("You approach the estate a guard halts your progress. From behind him th Noble Lord calls out rather pointedly:" +
+            awaitInput("As you approach the estate a guard halts your progress. From behind him the Noble Lord calls out rather pointedly:" +
                     "\n \"What do YOU want?");
             WorldState.getInstance().setAtNoble(true);
         }

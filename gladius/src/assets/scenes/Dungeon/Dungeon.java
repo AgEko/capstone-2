@@ -11,7 +11,8 @@ public class Dungeon extends Scene {
 
     public void interaction(){
         int choice = -1;
-
+        System.out.println("" +
+                "\nYou are outside the dungeon.");
         System.out.println("0 - Leave and go Home" +
                 "\n1 - Enter the dungeon.");
         try {

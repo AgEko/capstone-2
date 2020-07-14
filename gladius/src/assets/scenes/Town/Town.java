@@ -21,10 +21,10 @@ public class Town extends Scene {
             awaitInput("You arrive in the town of Kleinstadt.");
             System.out.println("0 - Go home" +
                     "\n1 - Go to the Baker." +
-                    "\n2 - Go to  the General Shop" +
-                    "\n3 - Go to  the Tanner" +
+                    "\n2 - Go to the General Shop" +
+                    "\n3 - Go to the Tanner" +
                     "\n4 - Go to the Noble Lord of the town" +
-                    "\n5 - Go to  the Tavern" +
+                    "\n5 - Go to the Tavern" +
                     "\n6 - Go to the Local Crime Boss" +
                     "\n7 - Go to the at the Temple");
             try {

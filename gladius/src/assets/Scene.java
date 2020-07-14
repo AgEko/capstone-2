@@ -39,8 +39,9 @@ public abstract class Scene {
     protected static void gameOver(String a){
         Scene.awaitInput(a);
 
-        System.out.println("As you die you never learn the fate of what happens to your town. Don't do that thing you did that get dead next time.");
+        System.out.println("As you die you never learn the fate of what happens to your town. Don't do that thing you did that got you dead next time.");
         WorldState.getInstance().setGameOver(true);
+        awaitInput("");
         System.exit(0);
         //WorldState.getInstance().game.setGameState(GameState.GameIntro);
     }

@@ -18,12 +18,12 @@ public class Game {
     }
 
     public void startGame() {
-        System.out.println("=====================");
+        System.out.println("============================");
         System.out.println("===     Dragon's Due     ===");
-        System.out.println("=====================");
+        System.out.println("============================");
         System.out.println("===     0 - Exit Game    ===");
         System.out.println("===     1 - Start Game   ===");
-        System.out.println("=====================");
+        System.out.println("============================");
         int choice = -1;
 
         try {
