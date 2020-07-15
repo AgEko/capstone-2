@@ -1,0 +1,83 @@
+Start
+
+What is your name?
+(personalizes )
+
+Implement middleAges - fantasy setting in intro
+
+    You're the resident adventurer the small assets.scenes of Kleinstadt.
+
+Awaken to an explosion, as you run out side there's a massive dragon.
+    Dragon roars " Humans I demand a tribute of gold! Agree or I shall burn this hovel into the earth. Any questions"?
+        > "Hey Dragon, Up yours!"
+            = "The Dragon is somewhat surprised by the audacity of your reply."
+                > "*That worked?* "
+                = It decides to quell your defiance by giving you the chomp." GAMEOVER()
+        > "How much gold do you demand Dragon?"
+            = "Bring me 500 gold. "
+                >"Aight."
+        > "Where can I find gold?"
+            = "Not my problem, you have three days."
+            = "Use this signal when you have the gold."
+            +(dragonFlare)
+                mainMenu()
+
+
+        The assets.scenes mayor comes to your house and asks you to collect the Dragon's fee. Decide where you want to gather gold from.
+        HomeMenu()
+            - Try to fundraise from townsfolk for the money.
+                > TOWN "You decide to ask the townsfolk to donate money to pay off the Dragon."
+            - Go to the dungeon.
+                >DUNGEON "You grab your sword and shield and head off to the nearest dungeon to scavenge for some loot."
+            - Summon the Dragon
+                >DRAGON_EVENT
+            - Check amount of gold
+                >CHECK_GOLD
+            - Check collected items
+                >CHECK_LOOT
+
+
+
+<> Tell a story
+[]plot
+    Mage Thief. Stealin gold to impress a dragon lady (She a gold digger like most dragons)
+    Mage Thief. Stealin stuff to pay off a due to a (boss) to save (loved one).
+    Mage Thief. JUST LEIK STEALIN'
+    -
+    Pay off dragon to save your village.
+    Turns of dragon is a lady.
+    Dragon thinks you're kinda cute (Pfft). Fight her now. || Try and go on a date with the dragon.
+        Talk to other adventurers in assets.scenes to set up an ambush for the dragon.
+    Steal stuff to go on a date with a dragon lady, she yelll as a waiter... yikes.
+
+
+
+[]atmosphere
+    Low-Fantasy {
+        magic(aether.transDimensional magic).(Not great on the offensive(needs set up), great for warding and charge items) and stuff but no furries. Maybe squats. Clockwork || Steam Tech.
+    }
+
+[]characters
+    - Lich Thel'zad
+
+<>Exploration
+[]mapBoards
+
+[] Navigation maps <World, local>
+[]Easter eggs!
+
+<>Battles
+[] Different enemies AI
+    -Balancing
+    -Fun(nah)
+
+<Items, spells>
+[]LOOT
+[] Upgrades
+[] Inventory (lb. limit? if (inventory.lbs > .limit) encumbered? would need real-time runtime)
+[] Shop
+
+Mage thief? Utility game.
+Stealin stuff to get enough gold to impress a dragon lady?
+Gettinig enought gold together to get close to a dragon, so you can save someone()
+

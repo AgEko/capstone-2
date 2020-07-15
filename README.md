@@ -1,4 +1,4 @@
-# Capstone 2 - Java Based Terminal Game
+# Capstone 2 - Java Based Terminal assets.Game
 
 1. There is a file <code>OOP.md</code> in the root level of this repository.  Please answer the questions in that file.
 
@@ -71,7 +71,7 @@ There are several UML modeling tools you could use to creat your Class Diagrams 
 
 To help kickstart your "Understanding the Problem / Planning phases of the project, take a look at the following article:
 
-- [How to create a Text Based Game](https://levelskip.com/classic/Make-a-Text-Based-Game)
+- [How to create a Text Based assets.Game](https://levelskip.com/classic/Make-a-Text-Based-assets.Game)
 
 Everything specified above should give you enough guidance and direction for how to approach the project.  
 
@@ -125,7 +125,7 @@ This will be especially applicable to  Step 4 of UPER - **Reflection / Refactori
 
 For the OOD Principles and OOD Patterns, you should be able to explain them clearly and demonstrate how you used them in your code to earn the full bonus points on these categories.
   
-* Implement a 3rd party Java library to aid you in Java Game Development.  A few examples:
+* Implement a 3rd party Java library to aid you in Java assets.Game Development.  A few examples:
   * [Slick2D](http://slick.ninjacave.com/)
   * [LWJGL](https://www.lwjgl.org/)
   * [libGDX](https://libgdx.badlogicgames.com/)

@@ -1,0 +1,144 @@
+******In TOWN
+        There are a few people in assets.scenes that might be able to donate.
+      //  [Total Gold collectible (!theft) = 300G , (theft) = more ]
+
+        - Go to the Baker
+            > Ask for a donation
+                = "Sure thing, it ain't much but here is what i can spare. "
+                + 15 G
+            > Steal from register
+                = "You distract the Baker by pointing behind him. You reach into the register and make off with the dough. *hur hur*"
+                + 30 G
+                - karma 1
+            >Leave
+
+      - Go to  the ShopKeep
+            // For buying weapons can only have one. so if (equippedWeapon == null) else you must sell or discard your other weapon
+            //Hammer will knock the skeletons apart (skeletons cant die), will stun the dragon need ambush to succeed killing Dragon.
+            //Torch is not a weapon, helps you see in the dungeon. If you have booze: you can make a firebomb to attack the Lich
+            // (doesn't kill him, allows you to loot the dungeon,  needs Dragon's flame to kill undead)
+            >Buy a Warhammer 15G
+                = "You purchased a Warhammer"
+                + (hammer)
+                - 15G
+            > Buy a Torch for 5G
+                = "You purchased a torch"
+                +(torch)
+                -5G
+            > Ask for a donation
+                = "If it means that we will still have a assets.scenes by day's end: i'm in."
+                + 50 G
+            > Steal from the ShopKeep
+                (knowsShopLovesKhanway)
+                    = "You distract the Shopkeep by telling him presidential candidate Khanway Vest is campaigning outside." He excitedly runs outside and you safely empty the till.
+                    + 100 G
+                    - karma 1
+                else
+                    = "You fail to find an opening to make a grab at the cash. The shopkeep is on his game like white on rice."
+            (lichQuest)
+            > Talk to the shopkeep about trading with the Lich
+                = "Woah that's quite a tale. I'm willing to trade, but we are going to have to do it out in the open. I won't risk my caravans going into that dungeon."
+                = (lichQuestSuccess)
+            > Leave
+
+
+      - Go to the Noble Lord of the town
+            > Ask for a donation
+                = "Begone with you, thou beggar! I shall have the guard remove you at once!"
+                = The guards tromp into the room and don't so much as slow down as they scoop you out to toss you out of the front gates.
+                >Leave
+            > Steal from the Lord
+                (blackJack)
+                    = You prowl about the premises until night time. You see your opportunity and knock out a few guards and get to the loot room. You make off with a sizeable amount of gold.
+                    + 450 G
+                    - karma 2
+                else
+                    = You prowl about the premises until night time. You sneak into the loot room and load up your pockets with that sweet sweet gold.
+                    = On your way out a guard sees you anc raises the alarm. You try to flee but all the gold weighs you down. The guards quickly apprehend you. The Captain of the guard takes you before the Noble Lord.
+                    = "How dare thou attempt to steal from me! You WILL learn! Un-head him Captain."  GAMEOVER
+
+            > Leave
+
+        - Go to  the Tanner
+            > Ask for a donation
+                = "Of course, of course we all have skin in this game, I'll give what I can if it means saving our home."
+                + 20 G
+            > Rob the Tanner
+                = "Aw heck, first the dragon burns half the assets.scenes and now this?" You make off with 45 G
+                + 45 G
+                - karma 1
+            > Leave
+
+        - Go to  the Tavern
+            > Ask the Town drunk
+                > Ask for a donation
+                    = " The heck? Do I look like i ain't drunk all my money already?" He passes out.
+                    > Steal his booze
+                        = (booze)
+                        - karma 1
+                    > Leave
+                > Ask for a drink
+                    = "Get bent, but uh, ill sell you this bottle for 25G"
+                        >Yes
+                            =(Booze)
+                        >No
+                            = "Then stop wasting my time, I have drinkin to do."
+            > Talk to the Barkeep
+                >Ask for a donation
+                    = "Nah if this assets.scenes burns down it'd be a blessing."
+                > Order a drink
+                    ( G > 5)
+                        = "If that damn shopkeep keeps talkin about how that Khanway Vest is going to "Make dragons dead again" I'm gonna slug him. Lot of help that bastard has done for us recently."
+                        + (knowShopLovesKhanway)
+                        - 5 G
+                    (G < 5)
+                        = "If you're lookin for free drink, go talk to that drunk. This ain't a charity."
+                > Steal from the Barkeep
+                    = "Your first mistake friend is thinkin that I dont get my share of thieves in here." The Barkeep gives you a right beating and takes half your gold for his trouble.
+                    - (Gold / 2)
+                    - karma 1
+                > Leave
+             > Leave
+
+      - Go to the Local Crime Boss
+            > Ask for a donation
+                = "Now just why should we give a damn about what happens to the assets.scenes? It ain't done nothin for us."
+                > No assets.scenes means no money for you and your gang to steal.
+                    = "Oi, we'll just find another assets.scenes, now beat it."
+                    = > Leave
+                > Hey theres no money in petty crime, Look at the Noble Lord. Owning this assets.scenes in the real racket. Help the assets.scenes and im sure we can get you to run the place.  It would all be legal, that just means no one will stop you,
+                    = "I like the sound of the assets.scenes owin' the gang. Don't go forgettin',  you owe me too."
+                        + 200 G
+                        + (oweTheMob)
+                        - karma 2
+                > "For the first time in your miserable existence you can be the good guy. Help the assets.scenes and they'll owe you. "
+                    = "Take this dog out back and give him what's for." The Crime Boss'es goons take you out back and take turns kicking you in the head. GAMEOVER
+                > Hey im looking to rob the Noble, I'm in need of something quiet to get past the guards.
+                    = "Yeah i got a little something that could help. A blackjack, i'd be willing to let it go for 50 G."
+                        > Sure
+                            ="Pleasure doin business with ya."
+                            -50 G
+                            +(Blackjack)
+                        > That price is too steep for me
+                            = Then get the HEK out!
+                > Leave
+
+      - Go to the at the Temple
+            > Ask for a donation
+                = "Well ain't this a change of pace. I'm sorry but the temple of Talos has very little to give. Here's what we can."
+                + 10 G
+            >Steal from the Temple
+                = "What did I tell ya? Nothing here mate."
+                +(talosMad)
+            >Ask for some Holy Water
+                = "By the divines i bless this water in the name of Talos, Lord of Storms."
+                + (holyWater)
+            > Make a donation
+                - gold.makeDonation( i )
+                ( i > 99G)
+                    = "Thank you may Talos bless your journey."
+                    + (!talosMad)
+                ( i < 99G)
+                     = "Thank you may Talos bless your journey."
+      - Go Home
+           >Return to MainMenu

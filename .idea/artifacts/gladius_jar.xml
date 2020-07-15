@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="gladius:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/gladius_jar</output-path>
+    <root id="archive" name="gladius.jar">
+      <element id="module-output" name="gladius" />
+    </root>
+  </artifact>
+</component>

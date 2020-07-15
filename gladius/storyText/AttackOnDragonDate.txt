@@ -1,0 +1,35 @@
+(ambush)
+    You plan to slay the Dragon, will you wait for the ambush?
+        > Yes
+            = ambushEvent()
+        > No
+(!ambush)
+    >Attack with your sword
+        = You order a large plate of turkey legs and begin to eat.
+        = When the Dragon throws her head back to gulp down a plate of Turkey legs you see your opportunity.
+        = You overturn the table as you leap forward, lashing out for her throat.
+        = You narrowly miss the killing blow.
+        = The dragon whips her tail around and makes distance between you and her.
+        = "How dare you!" She snarls "I will raze this assets.scenes until there is only dust!"
+        = She fireballs you.
+        = You are blasted through a wall as you burn to crisp. GAMEOVER
+    (hammer)
+    >Strike first with your Warhammer
+        = You order a large plate of turkey legs and begin to eat.
+        = When the Dragon throws her head back to gulp down a plate of Turkey legs you see your opportunity.
+        = You overturn the table as you leap forward, raising your warhammer.
+        = The dragon jerks her head back to focus on you taken by surprise.
+        = You force the hammer down hard onto her head with all of your might.
+        = The shock reverberates off her scales, you feel your arms start to go numb to the recoil.
+        = The dragon is stunned by the blow. Giving you ample opportunity to take your sword and drive it deep into it's heart.
+        = The dragon gasps as it's eyes bulge with confusion. You wrench your sword out and hot blood spills forth from the wound.
+        = You strike again. This time in the dragons throat. You force the blade lengthwise,  cracking open the dragons neck like a crab leg.
+        = You behead the dragon.
+            > Saved the day.
+            = You have slain the dragon! All by yourself! Impressive! The people rejoice!
+            (soloDragonKill)
+            +karma 3
+            ENDGAME
+    (ambush)
+    > Decide to wait for the ambush
+        = ambushEvent()

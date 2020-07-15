@@ -1,0 +1,98 @@
+Player
+int gold;
+item hammer;
+item torch;
+item booze
+item blackjack;
+item holyWater;
+
+// Unused
+bool
+-shopLovesKhanway
+-ambush
+-drunkDragon
+
+//Effect Endgame dialogue
+int karma;
+
+
+boolean(stoleFromLich)
+// can dead if (!dragonDF) && (karma < -3)
+// Skeletons retreat, decide that their work is more important than revenge.
+
+boolean (talosMad)
+// can force (stoleFromLich) even if (dragonGF)
+
+boolean (lichQuestSuccess)
+//flavour
+boolean (dragonGF)
+//flavour
+boolean(deadDragon)
+//flavour
+boolean (oweTheMob)
+//flavour
+
+
+//If you get here the assets.scenes is saved, you can still die in the post game it will go.
+
+scenarioResults();
+mainGameMenu();
+
+Kleinstadt
+
+Standard ending
+    =You saved Kleinstadt from the dragon's wrath! The townspeople rejoice and you can retire back to your home for a well deserved nap!
+
+    (oweTheMob)
+        = The Crime Boss calls in the favor you owe him to unseat the Noble Lord for ownership of the Kleinstadt. After a few shady deals he eventually becomes the new Lord.
+        = To your bewilderment, the Crime boss actually brings much prosperity to Kleinstadt. A booming economy and a strict yet fair judicial system.
+        = Oh! He also hit the sweet spot on the Laffer curve. Netting im the most in taxes while still allowing the free market to grow like a weed. Good job Crime Boss! Crime Boss 2020!
+
+    (dragonGF)
+        = You're now going steady with Lirastrasza the Dragon. Who woulda thunk it? Dating a dragon!
+        = You go on many adventure and bring home loads of gold and gems to add to Lirastrasza's dragon horde.
+        = *some* of the gold might be extorted from other towns, but hey. Our town is just peachy!
+
+    (dragonDead) && (soloDragonKill)
+        = After slaying the dragon solo, you turn into a bit of a celebrity at the adventures' guild.
+        = You can charge top coin for your services and go on many harrowing adventures.
+        = You will be remembered for quite some time, Dragon Slayer.
+    (dragonDead) && (!soloDragonKill)
+        = You did your part to kill the dragon, working with the people of Kleinstadt you found strength in working together.
+        = Having killed a dragon the people of Kleinstadt become hardy and fearless.
+        = Kleinstadt becomes a great city focused on centralizing the Adventuring guilds and bringing peace throughout the land.
+
+    (dragonDead) && (lazyDragonKill)
+        = You were instrumental in getting the dragon in position to be slain.
+        = The people of Kleinstadt don't quite see it this way, they are upset at your lack of action during the fight with the dragon as many of the men died during the ambush.
+        = You continue life as an small time adventurer, not interested in risking your life your life for every random contract
+
+    (stoleFromLich) &&  && (!dragonGF)
+        = Having stolen from the Lich Thel'zan a band of skeletons led by Mr.Boneregard arrive outside Kleinstadt. Demanding the townsfolk had you over to meet justice at their hands.
+        (karma < -3)
+            = The people of Kleinstadt don't find you to be a very honorable guy and decide to hand you over to the Lich'es minions.
+
+            (dragonGF)
+                = You tell Lirastrasza about the Lich'es demands and she snorts her disapproval at the attempt on your life.
+                = Lirastrasza takes flight and launches a fireball at the skeletons who scatter, many perishing in the dragon flame, the other screeching as they retreat.
+                = You give Lirastrasza a peck on the cheek, "Thanks Boo.".
+                = Having been betrayed by the towns fold you decide to live as a roving bandito with Lirastrasza stealing gold and amassing a healthy dragon horde.
+            (!dragonGF)
+                = The townsfolk hand you over the Mr. Boneregard. Who drags you back to the Crypt.
+                = Thel'zan sucks your soul out and make you into a haunting geist. You are tethered to the entrance of the Crypt as a deterrence to those who would seek harm on the dungeon's inhabitants.
+        (karma > 0)
+            = The townspeople of Kleinstadt side with you and tell Mr.Boneregard to get stuffed.
+            = Mr.Boneregard remebering his Lich'es command to no start a war with the humans. Decided that you are not worth the cost.
+            = The Skeletons retreat and you live in peace with the people of Kleinstadt.
+
+    (lichQuestSuccess)
+        = The shopkeep sends out a heavily armed caravan to cautiously trade with the Lich.
+        = The trades prove fruitful for both parties involved. The shopkeep relaxes the heavy guard on his caravans.
+        = With the Lich keeping the bandits clear from the trading routes, all trade in the area experiences a boom in prosperity and safety.
+        = The Lich is able to continue his research in peace while his minions moonlight as security forces for the region.
+
+
+
+
+
+
